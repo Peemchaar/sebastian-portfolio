@@ -1,0 +1,148 @@
+/* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: Fira;
+    src: url('src/assets/fonts/Fira_Sans/FiraSans-Medium.ttf') format('ttf');
+    font-weight: 500;
+}
+@font-face {
+    font-family: Fira;
+    src: url('src/assets/fonts/Fira_Sans/FiraSans-Bold.ttf') format('ttf');
+    font-weight: 700;
+}
+@font-face {
+    font-family: Nunito;
+    src: url('src/assets/fonts/Nunito_Sans/NunitoSans_10pt-Light.ttf') format('ttf');
+    font-weight: 300;
+}
+@font-face {
+    font-family: Nunito;
+    src: url('src/assets/fonts/Nunito_Sans/NunitoSans_10pt-Regular.ttf') format('ttf');
+    font-weight: 300;
+}
+
+/* ------FONT COLORS-------*/
+.color-white1{
+    color: #F8F9FA;
+}
+.color-white2{
+    color: #E9ECEF;
+}
+.color-medium1{
+    color: #DEE2E6;
+}
+.color-medium2{
+    color: #CED4DA;
+}
+.color-medium3{
+    color: #ADB5BD;
+}
+.color-medium1{
+    color: #DEE2E6;
+}
+.color-dark1{
+    color: #6C757D;
+}
+.color-dark2{
+    color: #495057;
+}
+.color-dark3{
+    color: #343A40;
+}
+.color-dark4{
+    color: #212529;
+}
+.color-dark5{
+    color: #030303;
+}
+
+/* ------ BACKGROUND COLORS ------*/
+.bg-primary-gradient{
+    background: linear-gradient(to right, rgba(33,37,41,1) 0%, rgba(73,80,87,1) 100%);
+}
+.bg-primary-hover{
+    background-color: transparent;
+    &:hover{
+        background-color: rgba(222, 226, 230, 0.24); 
+    }
+}
+.bg-white1{
+    background: #F8F9FA;
+}
+.bg-white2{
+    background: #E9ECEF;
+}
+.bg-medium1{
+    background: #DEE2E6;
+}
+.bg-medium2{
+    background: #CED4DA;
+}
+.bg-medium3{
+    background: #ADB5BD;
+}
+.bg-medium1{
+    background: #DEE2E6;
+}
+.bg-dark1{
+    background: #6C757D;
+}
+.bg-dark2{
+    background: #495057;
+}
+.bg-dark3{
+    background: #343A40;
+}
+.bg-dark4{
+    background: #212529;
+}
+.bg-dark5{
+    background: #030303;
+}
+
+/* ------ PADDINGS ------*/
+.p1{
+    padding: 8px;
+}
+.p2{
+    padding: 16px;
+}
+.p3{
+    padding: 24px;
+}
+.p4{
+    padding: 32px;
+}
+
+.pv1{
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+.pv2{
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+.pv3{
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+.pv4{
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
+.ph1{
+    padding-left: 8px;
+    padding-right: 8px;
+}
+.ph2{
+    padding-left: 16px;
+    padding-right: 16px;
+}
+.ph3{
+    padding-left: 24px;
+    padding-right: 24px;
+}
+.ph4{
+    padding-left: 32px;
+    padding-right: 32px;
+}
