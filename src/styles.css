@@ -1,23 +1,48 @@
-/* You can add global styles to this file, and also import other style files */
 @font-face {
-    font-family: Fira;
-    src: url('src/assets/fonts/Fira_Sans/FiraSans-Medium.ttf') format('ttf');
+    font-family: FiraMedium;
+    src: url('assets/fonts/Fira_Sans/FiraSans-Medium.ttf');
     font-weight: 500;
 }
 @font-face {
-    font-family: Fira;
-    src: url('src/assets/fonts/Fira_Sans/FiraSans-Bold.ttf') format('ttf');
+    font-family: FiraBold;
+    src: url('assets/fonts/Fira_Sans/FiraSans-Bold.ttf');
     font-weight: 700;
 }
 @font-face {
-    font-family: Nunito;
-    src: url('src/assets/fonts/Nunito_Sans/NunitoSans_10pt-Light.ttf') format('ttf');
+    font-family: NunitoLight;
+    src: url('assets/fonts/Nunito_Sans/NunitoSans_10pt-Light.ttf');
     font-weight: 300;
 }
 @font-face {
-    font-family: Nunito;
-    src: url('src/assets/fonts/Nunito_Sans/NunitoSans_10pt-Regular.ttf') format('ttf');
-    font-weight: 300;
+    font-family: NunitoRegular;
+    src: url('assets/fonts/Nunito_Sans/NunitoSans_10pt-Regular.ttf');
+    font-weight: 400;
+}
+@font-face {
+    font-family: LibreFranklinSemiBold;
+    src: url('assets/fonts/Libre_Franklin/LibreFranklin-SemiBold.ttf');
+    font-weight: 600;
+}
+
+body{
+    margin: 0;
+}
+
+/* ------ FONT CLASSES ------*/
+.fira-medium{
+    font-family: 'FiraMedium' !important;
+}
+.fira-bold{
+    font-family: 'FiraBold' !important;
+}
+.nunito-light{
+    font-family: 'NunitoLight' !important;
+}
+.nunito-regular{
+    font-family: 'NunitoRegular' !important;
+}
+.libre-semiBold{
+    font-family: 'LibreFranklinSemiBold' !important;
 }
 
 /* ------FONT COLORS-------*/

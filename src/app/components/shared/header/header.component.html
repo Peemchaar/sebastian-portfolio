@@ -1,0 +1,12 @@
+<div class="header-container pv2 bg-primary-gradient">
+    <img src="../../../../assets/img/header_logo.svg" alt="logo">
+    <div class="nav-bar">
+        <ng-container *ngFor="let item of navData">
+            <div class="nav-item pv2 ph3 bg-primary-hover" [ngClass]="item.active ? 'active': ''"
+                (click)=navigate(item.text)
+            >
+                <span class="fira-medium color-medium2">{{item.text}}</span>
+            </div>
+        </ng-container>
+    </div>
+</div>

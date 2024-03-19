@@ -1,0 +1,61 @@
+.hero-container{
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding-top: 51px;
+    padding-bottom: 98px;
+}
+
+.presentation-container{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-content: center;
+    max-width: 445px;
+    gap: 24px;
+    h2{
+        font-size: 64px;
+        line-height: 56px;
+        margin: 0;
+    }
+}
+
+.overview-container{
+    background-image: url('../../../assets/img/portrait_home_x2.png');
+    background-size: cover;
+    width: 614px;
+    height: 619px;
+    max-width: 614px;
+    max-height: 619px;
+}
+
+.displacer-container{
+    padding: 16px 22px;
+    max-height: 175px;
+    overflow-x: hidden; 
+}
+
+.displacer{
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+    animation: scroll 30s linear infinite;
+    overflow-x: hidden;
+    min-width: fit-content;
+    span{
+        text-align: center;
+        min-width: 1800px;
+        font-size: 124px;
+        display: inline-block;
+        overflow-y: hidden;
+    }
+}
+
+@keyframes scroll {
+    from {
+      transform: translateX(30%);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+}
