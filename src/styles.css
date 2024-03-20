@@ -24,6 +24,12 @@
     font-weight: 600;
 }
 
+@font-face {
+    font-family: MulishSemiBold;
+    src: url('assets/fonts/Mulish/Mulish-SemiBold.ttf');
+    font-weight: 600;
+}
+
 body{
     margin: 0;
 }
@@ -43,6 +49,9 @@ body{
 }
 .libre-semiBold{
     font-family: 'LibreFranklinSemiBold' !important;
+}
+.mulish-semiBold{
+    font-family: 'MulishSemiBold' !important;
 }
 
 /* ------FONT COLORS-------*/
@@ -170,4 +179,42 @@ body{
 .ph4{
     padding-left: 32px;
     padding-right: 32px;
+}
+
+
+/* ------ BUTTOMS ------ */
+.btn-primary-white{
+    cursor: pointer;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #E9ECEF;
+    &:hover{
+        background-color: #DEE2E6;
+    }
+}
+
+.btn-primary-dark{
+    cursor: pointer;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #495057;
+    &:hover{
+        box-shadow: 2px 4px 4px 0px #ADB5BD;
+    }
+}
+
+.btn-secondary-white{
+    cursor: pointer;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    &:hover{
+        background-color: rgba(222, 226, 230, 0.24);
+    }
 }
