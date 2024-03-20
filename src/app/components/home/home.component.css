@@ -59,3 +59,109 @@
       transform: translateX(-100%);
     }
 }
+
+
+
+.statement-container{
+    display: flex;
+    min-height: 358px;
+    max-height: 358px;
+    align-items: center;
+    justify-content: center;
+    gap: 358px;
+    .text-container{
+        max-width: 540px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 32px;
+        .title{
+            font-size: 32px;
+        }
+        .text{
+            font-size: 16px;
+        }
+    }
+    .buttom-container{
+        display: flex;
+        align-items: center;
+        align-self: center;
+        .rounded-buttom{
+            cursor: pointer;
+            width: 152px;
+            height: 152px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: .5s;
+            span{
+                font-size: 14px;
+            }
+        }
+        .rounded-buttom:hover{
+            transform: scale(160px, 160px);
+        }
+    }
+}
+
+.works-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 1200px;
+    max-height: 1200px;
+    .title{
+        font-size: 56px;
+        text-align: center;
+    }
+    .projects-container{
+        margin-top: 67px;
+        width: 100%;
+        .carrousel{
+            display: grid;
+            grid-auto-flow: column;
+            scroll-behavior: auto;
+            gap: 20px;
+            overflow-y: auto;
+            overscroll-behavior-x: contain;
+            scroll-snap-type: x mandatory;
+            scrollbar-width: none;
+        }
+        .carrousel::-webkit-scrollbar{
+            display: none;
+        }
+    }
+}
+
+.sub-container{
+    margin-top: 38px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    .title{
+        font-size: 36px;
+        text-align: center;
+    }
+    .text{
+        max-width: 658px;
+        margin-top: 23px;
+        font-size: 16px;
+        text-align: center;
+    }
+    .buttom{
+        margin-top: 42px;
+        width: 110px;
+        height: 50px;
+        border-radius: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        span{
+            font-size: 14px;
+        }
+    }
+}

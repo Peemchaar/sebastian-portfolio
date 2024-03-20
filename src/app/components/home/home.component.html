@@ -23,5 +23,49 @@
             CREATING EXCELLENT RESULTS
         </span>
     </div>
-    
+</div>
+<div class="statement-container bg-white1">
+    <div class="text-container">
+        <span class="title color-dark2 fira-bold">
+            What is my statement
+        </span>
+        <p class="text color-dark4 nunito-regular">
+            Design progress means to achieve greater things with simpler ways. Let’s design make our lives better through minimal solutions that needs greater amounts of thought.
+        </p>
+    </div>
+    <div class="buttom-container">
+        <div class="rounded-buttom bg-dark2">
+            <span class="fira-medium color-white1">
+                Know me
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="works-container bg-dark3">
+    <span class="title fira-bold color-white1">My most recent projects</span>
+    <div class="projects-container">
+        <div class="carrousel">
+            <ng-container *ngFor="let project of projectsList; let x = index">
+                <app-project-card
+                    [project]="project"
+                >
+                </app-project-card>
+            </ng-container>
+        </div>
+    </div>
+    <div class="sub-container">
+        <span class="title fira-medium color-white2">
+            My Works
+        </span>
+        <p class="text nunito-regular color-white1">
+            Several Design projects developed for various enterprises around the world.<br>
+            Standing our in Miami, Spain and Mexico with innovative digital products with an unique design approach.
+        </p>
+        <div class="buttom bg-white2">
+            <span class="fira-medium color-dark3">
+                See more
+            </span>
+        </div>
+    </div>
 </div>
