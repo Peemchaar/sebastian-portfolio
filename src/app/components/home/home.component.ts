@@ -1,5 +1,7 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
 import { IProject, ProjectsList } from 'src/app/interfaces/project.interface';
+import { HeaderService } from 'src/app/services/header.service';
 
 @Component({
   selector: 'app-home',
@@ -35,10 +37,29 @@ export class HomeComponent implements OnInit {
     this.slider!.nativeElement.scrollLeft = this.scrollLeft - scroll;
   }
 
-  constructor() { }
+  constructor(
+    private readonly headerService: HeaderService,
+    private router: Router,
+  ) { }
 
   ngOnInit(): void {
     
   }
 
+
+  public navigate(target: string){
+    switch (target.toLocaleLowerCase()) {
+      case 'my work':
+        this.headerService.updateCurrentPage(target);
+        this.router.navigate(['/work']);
+        break;
+      case 'about':
+        this.headerService.updateCurrentPage(target);
+        this.router.navigate(['/about']);
+        break;
+    
+      default:
+        break;
+    }
+  }
 }

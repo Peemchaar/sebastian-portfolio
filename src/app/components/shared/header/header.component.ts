@@ -14,7 +14,7 @@ export class HeaderComponent implements OnInit {
       active:  true
     },
     {
-      text: 'My Work',
+      text: 'My work',
       active:  false
     },
     {
@@ -30,6 +30,9 @@ export class HeaderComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    let location = window.location.href
+    let localArray = location.split("/");
+    this.headerService.updateCurrentPage(localArray[localArray.length - 1])
     this.headerService.currentPage.subscribe(page => {
       this.currentPage = page;
       this.updateActive()
@@ -41,17 +44,17 @@ export class HeaderComponent implements OnInit {
     });
   }
 
-  navigate(target: string){
-    switch (target) {
-      case 'Home':
+  public navigate(target: string){
+    switch (target.toLocaleLowerCase()) {
+      case 'home':
         this.headerService.updateCurrentPage(target);
         this.router.navigate(['']);
         break;
-      case 'My Work':
+      case 'my work':
         this.headerService.updateCurrentPage(target);
         this.router.navigate(['/work']);
         break;
-      case 'About':
+      case 'about':
         this.headerService.updateCurrentPage(target);
         this.router.navigate(['/about']);
         break;

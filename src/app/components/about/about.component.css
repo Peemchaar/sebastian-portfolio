@@ -1,0 +1,107 @@
+.about-container{
+    display: flex;
+    justify-content: center;
+    gap: 123px;
+    .presentation-container{
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        justify-content: center;
+        max-width: 445px;
+        gap: 24px;
+        h2{
+            font-size: 64px;
+            line-height: 56px;
+            text-align: right;
+            margin: 0;
+        }
+        p{
+            text-align: right;
+        }
+        .buttom-container{
+            display: flex;
+            gap: 16px;
+            justify-content: flex-end;
+            .btn-secondary-white{
+                height: 50px;
+                width: 111px;
+            }
+            .btn-primary-white{
+                height: 50px;
+                width: 176px;
+            }
+        }
+    }
+}
+
+.picture-container{
+    background-image: url('../../../assets/img/about_img.svg');
+    background-size: cover;
+    width: 663px;
+    height: 751px;
+    max-width: 663px;
+    max-height: 751px;
+}
+
+.skills-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    .wrapper{
+        display: flex;
+        min-height: 358px;
+        max-height: 358px;
+        justify-content: space-around;
+        .skill-details{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 32px;
+            .title{
+                font-size: 32px;
+                max-width: 390px;
+                text-align: center;
+            }
+            .text{
+                font-size: 16px;
+                max-width: 390px;
+                text-align: center;
+            }
+        }
+    }
+}
+
+.myself-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 748px;
+    max-height: 748px;
+    .wrapper{
+        min-width: 999px;
+        max-width: 999px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .title{
+        width: 100%;
+        font-size: 44px;
+        text-align: left;
+    }
+    .text{
+        margin-top: 80px;
+        font-size: 20px;
+        text-align: left;
+    }
+    .date{
+        width: 100%;
+        margin-top: 36px;
+        font-size: 24px;
+        text-align: right;
+    }
+}
+
