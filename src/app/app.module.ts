@@ -1,6 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { NgtSobaOrbitControlsModule } from '@angular-three/soba/controls';
+import { NgtAmbientLightModule, NgtPointLightModule } from '@angular-three/core/lights';
+import { NgtPrimitiveModule } from '@angular-three/core/primitive';
+import { NgtSobaLoaderModule } from '@angular-three/soba/loaders';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/shared/header/header.component';
@@ -8,6 +13,11 @@ import { FooterComponent } from './components/shared/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
 import { ProjectCardComponent } from './components/shared/project-card/project-card.component';
 import { AboutComponent } from './components/about/about.component';
+import { ContactComponent } from './components/contact/contact.component';
+import { NgtColorPipeModule, NgtCoreModule } from '@angular-three/core';
+
+
+
 
 @NgModule({
   declarations: [
@@ -16,11 +26,19 @@ import { AboutComponent } from './components/about/about.component';
     FooterComponent,
     HomeComponent,
     ProjectCardComponent,
-    AboutComponent
+    AboutComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgtCoreModule,
+    NgtSobaLoaderModule,
+    NgtPrimitiveModule,
+    NgtSobaOrbitControlsModule,
+    NgtAmbientLightModule,
+    NgtPointLightModule,
+    NgtColorPipeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
