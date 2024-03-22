@@ -1,0 +1,5 @@
+<ngt-canvas [scene]="{background: 'transparent' | color }">
+    <ngt-primitive *ngIf="planet$ | async as planet" [object]="planet.scene">
+
+    </ngt-primitive>
+</ngt-canvas>
