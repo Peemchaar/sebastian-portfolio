@@ -6,7 +6,104 @@
     left: 0;
 }
 
-.model-container{
-    height: 518px;
-    width: 518px;
+.collaborate-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 88px;
+    min-height: 683px;
+    .image-container{
+        background-image: url('../../../assets/img/contact_img_1.svg');
+        background-size: cover;
+        width: 682px;
+        height: 488px;
+        max-width: 682px;
+        max-height: 488px;
+    }
+    .create-container{
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        justify-content: center;
+        max-width: 562px;
+        gap: 24px;
+        .title{
+            font-size: 64px;
+            text-align: right;
+        }
+        .text{
+            font-size: 16px;
+            text-align: right;
+            margin: 0;
+        }
+        .buttom-container{
+            display: flex;
+            gap: 16px;
+            justify-content: flex-end;
+            .btn-primary-white{
+                height: 50px;
+                width: 123px;
+            }
+        }
+    }
+}
+
+.contact-container{
+    min-height: 955px;
+    padding-top: 40px;
+    display: flex;
+    justify-content: center;
+    .contact-info{
+        min-width: 704px;
+        max-width: 704px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .model-container{
+            height: 518px;
+            width: 518px;
+        }
+        .info-container{
+            height: 228px;
+            width: 507px;
+            display: flex;
+            justify-content: flex-start;
+            gap: 12px;
+            .left-side{
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+                justify-content: flex-start;
+                max-width: 295px;
+                min-width: 295px;
+                .info-details{
+                    width: 100%;
+                    border: 8px solid #1e1f20;
+                    border-radius: 8px;
+                    min-height: 74px;
+                    max-height: 74px;
+                    padding: 12px 8px;
+                    display: flex;
+                    gap:8px;
+                    flex-direction: column;
+                    justify-content: center;
+                    .title{
+                        font-size: 12px;
+                    }
+                    .mail{
+                        font-size: 16px;
+                    }
+                    .phone{
+                        font-size: 16px;
+
+                    }
+                }
+                .bottom-side{
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                }
+            }
+        }
+    }
 }
