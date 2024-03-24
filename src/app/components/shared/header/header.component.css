@@ -11,6 +11,10 @@
     }
 }
 
+.contact-bg{
+    background: #495057;
+}
+
 .nav-container{
     display: flex;
     justify-content: space-between;

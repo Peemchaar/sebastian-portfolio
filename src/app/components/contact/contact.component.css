@@ -1,10 +1,3 @@
-#container3D canvas{
-    width: 518px !important;
-    height: 518px !important;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
 
 .collaborate-container{
     display: flex;
@@ -12,6 +5,7 @@
     align-items: center;
     gap: 88px;
     min-height: 683px;
+    background: linear-gradient(to top, #212529 0%, #495057 100%);;
     .image-container{
         background-image: url('../../../assets/img/contact_img_1.svg');
         background-size: cover;
@@ -50,20 +44,32 @@
 
 .contact-container{
     min-height: 955px;
-    padding-top: 40px;
     display: flex;
     justify-content: center;
-    .contact-info{
-        min-width: 704px;
-        max-width: 704px;
+    .form-container{
+        min-width: 55%;
+        max-width: 55%;
         display: flex;
         flex-direction: column;
         align-items: center;
+        padding-top: 40px;
+        /*background: linear-gradient(to left, #030303 0%, #F8F9FA 100%);*/
+       
+    }
+    .contact-info{
+        min-width: 45%;
+        max-width: 45%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-top: 40px;
         .model-container{
             height: 518px;
             width: 518px;
+            padding-left: 60px;
         }
         .info-container{
+            padding-left: 60px;
             height: 228px;
             width: 507px;
             display: flex;
@@ -77,8 +83,7 @@
                 max-width: 295px;
                 min-width: 295px;
                 .info-details{
-                    width: 100%;
-                    border: 8px solid #1e1f20;
+                    border: 8px solid #343A40;
                     border-radius: 8px;
                     min-height: 74px;
                     max-height: 74px;
@@ -99,7 +104,6 @@
                     }
                 }
                 .bottom-side{
-                    width: 100%;
                     display: flex;
                     justify-content: space-between;
                 }

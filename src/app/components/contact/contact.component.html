@@ -1,5 +1,5 @@
 
-<div class="collaborate-container bg-primary-gradient">
+<div class="collaborate-container ">
     <div class="image-container">
 
     </div>
@@ -22,12 +22,12 @@
 </div>
 
 <div class="contact-container bg-white1">
-    <div class="form-container">
+    <div class="form-container bg-dark4">
 
     </div>
-    <div class="contact-info bg-dark5">
+    <div class="contact-info bg-dark4">
         <div class="model-container">
-            <ngt-canvas [scene]="{background: customColor }">
+            <ngt-canvas [scene]="{background: customColor | color}">
                 <ngt-ambient-light [intensity]="0.5"></ngt-ambient-light>
                 <ngt-point-light [intensity]="0.5" [position]="[1,1,0]"></ngt-point-light>
                 <ngt-point-light [intensity]="0.5" [position]="[-1,1,0]"></ngt-point-light>
@@ -52,7 +52,16 @@
                     </span>
                 </div>
                 <div class="bottom-side">
-                    <div class="ubiquity bg-dark4"></div>
+                    <div class="ubiquity bg-dark4">
+                        <div class="ubiquity-indicator">
+                            <span class="title fira-light color-medium2">
+                                Info details
+                            </span>
+                            <span class="location">
+                                Latin America
+                            </span>
+                        </div>
+                    </div>
                     <div class="time bg-dark4"></div>
                 </div>
             </div>

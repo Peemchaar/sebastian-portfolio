@@ -12,9 +12,9 @@ import { Euler, PerspectiveCamera, Vector3 } from 'three';
   styleUrls: ['./contact.component.css'],
 })
 export class ContactComponent implements OnInit {
-  customColor = new THREE.Color( 0x030303 );
+  customColor = new THREE.Color( 0x212529 );
   planet$ = this.ngtGLTFLoaderService.load('../../../assets/3d/world_earth_planet_GLTF/scene.gltf');
-
+  
   constructor(
     private ngtGLTFLoaderService: NgtGLTFLoaderService
   ) {
@@ -22,7 +22,6 @@ export class ContactComponent implements OnInit {
   }
 
   ngOnInit(): void {
-   
   }
 
   setInitial(controls: NgtSobaOrbitControls){
