@@ -23,7 +23,62 @@
 
 <div class="contact-container bg-white1">
     <div class="form-container bg-dark4">
-
+        <span class="title fira-bold color-white1 ph4">
+            Please fill this form to get in touch
+        </span>
+        <span class="text nunito-light color-medium2 ph4">
+            Write your information to make contact! A descriptive message will help me to understand better what do you need from me. Be creative so I can better relate to you!
+        </span>
+        <form [formGroup]="form" autocomplete="off" action="">
+            <div class="inputs-container ph4">
+                <div class="input-container">
+                    <input class="custom-input-text nunito-regular color-medium2" type="text" placeholder="Name*" formControlName="name"/>
+                    <img src="../../../assets/icons/clear.svg" alt="clear" (click)="clearField('name')">
+                </div>
+            </div>
+            <div class="inputs-container ph4">
+                <div class="input-container">
+                    <input class="custom-input-text nunito-regular color-medium2" type="text" placeholder="Last name*" formControlName="lastName"/>
+                    <img src="../../../assets/icons/clear.svg" alt="clear" (click)="clearField('lastName')">
+                </div>
+            </div>
+            <div class="inputs-container ph4">
+                <div class="input-container">
+                    <input class="custom-input-text nunito-regular color-medium2" type="text" placeholder="Organization*" formControlName="organization"/>
+                    <img src="../../../assets/icons/clear.svg" alt="clear" (click)="clearField('organization')">
+                </div>
+            </div>
+            <div class="inputs-container ph4">
+                <div class="input-container">
+                    <input class="custom-input-text nunito-regular color-medium2" type="text" placeholder="Email*" formControlName="email"/>
+                    <img src="../../../assets/icons/clear.svg" alt="clear" (click)="clearField('email')">
+                </div>
+            </div>
+            <div class="inputs-container ph4">
+                <div class="input-container">
+                    <textarea 
+                        class="custom-input-text nunito-regular color-medium2" 
+                        rows="10"
+                        (resize)="false"
+                        placeholder="What do you want to say*"
+                        formControlName="message"
+                    >
+                    </textarea>
+                </div>
+            </div>
+        </form>
+        <div class="validator-container ph4">
+            <div class="wrapper">
+                <span class="validator nunito-regular" *ngIf="!form.valid && form.dirty">
+                    All the fields are required
+                </span>
+                <div class="btn-primary-dark" (click)="sendEmail()">
+                    <span class="fira-medium color-white1">
+                        Send
+                    </span>
+                </div>
+            </div>
+        </div>
     </div>
     <div class="contact-info bg-dark4">
         <div class="model-container">
@@ -48,24 +103,56 @@
                         sebasdesign77@gmail.com
                     </span>
                     <span class="phone nunito-semiBold color-white2">
-                        +584143896790
+                        {{phones}}
                     </span>
                 </div>
                 <div class="bottom-side">
                     <div class="ubiquity bg-dark4">
                         <div class="ubiquity-indicator">
-                            <span class="title fira-light color-medium2">
-                                Info details
+                            <span class="title nunito-light color-medium3">
+                                Ubiquity
                             </span>
-                            <span class="location">
+                            <span class="location nunito-light color-white1 ">
                                 Latin America
                             </span>
                         </div>
+                        <div class="location-container">
+                            <img src="../../../assets/icons/location_on.svg" alt="location">
+                            <span class="location-text nunito-regular color-white1">
+                                Caracas, Venezuela
+                            </span>
+                        </div>
                     </div>
-                    <div class="time bg-dark4"></div>
+                    <div class="time bg-dark4">
+                        <div class="time-zone">
+                            <span class="title nunito-light color-medium3">
+                                Time
+                            </span>
+                            <span class="time-text nunito-light color-white1 ">
+                                GMT:-4:00
+                            </span>
+                        </div>
+                        <div class="location-container">
+                            <img src="../../../assets/icons/schedule.svg" alt="time">
+                            <span class="location-text nunito-regular color-white1">
+                                {{hourGMT4}}
+                            </span>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="social-media bg-dark4"></div>
+            <div class="social-media bg-dark4">
+                <span class="title fira-light color-medium2">
+                    Social media
+                </span>
+                <ng-container *ngFor="let media of socialMedia; let x = index">
+                    <span class="social-media-text nunito-semiBold color-white2"
+                        (click)="openMedia(media.link)"
+                    >
+                        {{media.name}}
+                    </span>
+                </ng-container>
+            </div>
         </div>
 
     </div>

@@ -15,7 +15,7 @@ import { ProjectCardComponent } from './components/shared/project-card/project-c
 import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { NgtColorPipeModule, NgtCoreModule } from '@angular-three/core';
-
+import {FormsModule , ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -38,7 +38,9 @@ import { NgtColorPipeModule, NgtCoreModule } from '@angular-three/core';
     NgtSobaOrbitControlsModule,
     NgtAmbientLightModule,
     NgtPointLightModule,
-    NgtColorPipeModule
+    NgtColorPipeModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
