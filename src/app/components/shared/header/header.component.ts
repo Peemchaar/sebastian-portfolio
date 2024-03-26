@@ -58,6 +58,10 @@ export class HeaderComponent implements OnInit {
         this.headerService.updateCurrentPage(target);
         this.router.navigate(['/about']);
         break;
+      case 'contact':
+        this.headerService.updateCurrentPage(target);
+        this.router.navigate(['/contact']);
+        break;
     
       default:
         break;

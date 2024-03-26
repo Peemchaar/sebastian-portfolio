@@ -1,4 +1,4 @@
-<div class="header-container pv2 bg-primary-gradient">
+<div class="header-container pv2 " [ngClass]="currentPage == 'contact' ? 'contact-bg': 'bg-primary-gradient'">
     <img src="../../../../assets/img/header_logo.svg" alt="logo">
     <div class="nav-container">
         <div class="nav-bar">
@@ -11,7 +11,8 @@
             </ng-container>
         </div>
         <div class="btn-primary-white">
-            <span class="fira-medium color-dark3">
+            <span class="fira-medium color-dark3"
+                (click)="navigate('contact')">
                 Contact
             </span>
         </div>

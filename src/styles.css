@@ -197,6 +197,10 @@ body{
     padding-right: 32px;
 }
 
+.mh4{
+    margin-left: 32px;
+    margin-right: 32px;
+}
 
 /* ------ BUTTOMS ------ */
 .btn-primary-white{
@@ -218,6 +222,7 @@ body{
     justify-content: center;
     align-items: center;
     background-color: #495057;
+    transition: .3s;
     &:hover{
         box-shadow: 2px 4px 4px 0px #ADB5BD;
     }
