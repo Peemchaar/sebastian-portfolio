@@ -1,0 +1,23 @@
+<div class="projects-container bg-primary-gradient">
+    <div class="title-container">
+        <span class="title fira-bold color-white1">
+            Creating Innovative Design Solutions
+        </span>
+        <span class="motto nunito-regular color-white2">
+            Make things better, make things simpler
+        </span>
+        <img src="../../../assets/icons/south.svg" alt="south">
+    </div>
+
+    <div class="cards-container">
+        <ng-container *ngFor="let project of projectsList; let x = index">
+            <app-project-card-big
+                [project]="project"
+            >
+            </app-project-card-big>
+        </ng-container>
+    </div>
+</div>
+
+
+
