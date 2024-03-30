@@ -16,6 +16,8 @@ import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { NgtColorPipeModule, NgtCoreModule } from '@angular-three/core';
 import {FormsModule , ReactiveFormsModule } from '@angular/forms';
+import { ProjectCardBigComponent } from './components/shared/project-card-big/project-card-big.component';
+import { ProjectsComponent } from './components/projects/projects.component';
 
 
 
@@ -27,7 +29,9 @@ import {FormsModule , ReactiveFormsModule } from '@angular/forms';
     HomeComponent,
     ProjectCardComponent,
     AboutComponent,
-    ContactComponent
+    ContactComponent,
+    ProjectCardBigComponent,
+    ProjectsComponent
   ],
   imports: [
     BrowserModule,

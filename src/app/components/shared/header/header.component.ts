@@ -52,7 +52,7 @@ export class HeaderComponent implements OnInit {
         break;
       case 'my work':
         this.headerService.updateCurrentPage(target);
-        this.router.navigate(['/work']);
+        this.router.navigate(['/projects']);
         break;
       case 'about':
         this.headerService.updateCurrentPage(target);
