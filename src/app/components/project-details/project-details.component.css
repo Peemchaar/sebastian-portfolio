@@ -1,0 +1,104 @@
+
+.main-container{
+    padding-top: 71px;
+}
+.brief-container{
+    display: flex;
+    
+    justify-content: space-between;
+    .text-container{
+        padding-top: 44px;
+        padding-left: 55px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        max-width: 576px;
+        min-height: 525px;
+        max-height: 525px;
+        gap: 12px;
+        .title{
+            min-height: 80px;
+            font-size: 36px;
+            line-height: 40px;
+            max-width: 492px;
+        }
+        .sub-title{
+            min-height: 40px;
+            .location{
+                font-size: 16px;
+                line-height: 22px;
+            }
+            .motto{
+                font-size: 16px;
+                line-height: 22px;
+            }
+        }
+        .intro{
+            font-size: 16px;
+            line-height: 22px;
+            max-width: 445px;
+        }
+        .tag-container{
+            margin-top: 24px;
+            display: flex;
+            gap: 12px;
+            justify-content: flex-start;
+            .tag{
+                padding: 4px 24px;
+                border: 1px solid #E9ECEF;
+                border-radius: 12px;
+                .text{
+                    font-size: 16px;
+                    line-height: 24px;
+                    text-align: center;
+                }
+            }
+        }
+    }
+    .img-container{
+        max-height: 574px;
+        display: flex;
+        width: 50%;
+        justify-content: flex-end;
+        img{
+            width: 100%;
+        }
+    }
+}
+
+.displacer-container{
+    padding: 12px 22px;
+    max-height: 175px;
+    overflow-x: hidden; 
+}
+
+.displacer{
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+    animation: scroll 30s linear infinite;
+    overflow-x: hidden;
+    min-width: fit-content;
+    span{
+        text-align: center;
+        min-width: 2800px;
+        font-size: 80px;
+        display: inline-block;
+        overflow-y: hidden;
+    }
+}
+
+.displacer.extended{
+    span{
+        min-width: 4300px !important;
+    }
+}
+
+@keyframes scroll {
+    from {
+      transform: translateX(30%);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+}

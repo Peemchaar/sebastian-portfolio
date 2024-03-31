@@ -18,6 +18,7 @@ import { NgtColorPipeModule, NgtCoreModule } from '@angular-three/core';
 import {FormsModule , ReactiveFormsModule } from '@angular/forms';
 import { ProjectCardBigComponent } from './components/shared/project-card-big/project-card-big.component';
 import { ProjectsComponent } from './components/projects/projects.component';
+import { ProjectDetailsComponent } from './components/project-details/project-details.component';
 
 
 
@@ -31,7 +32,8 @@ import { ProjectsComponent } from './components/projects/projects.component';
     AboutComponent,
     ContactComponent,
     ProjectCardBigComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    ProjectDetailsComponent
   ],
   imports: [
     BrowserModule,
