@@ -7,6 +7,8 @@ export interface IProject {
     location: string
     motto: string
     intro: string
+    tags: string[]
+    displaceItems: string[]
 }
 
 
@@ -21,7 +23,17 @@ export class ProjectsList extends Array<IProject> {
             title: 'CarbonJourney: Decarbonization software',
             location: 'CBPI c.a & Ithaca Environmental, 2023 - ',
             motto: 'Allowing enterprises reduce their GHG emissions efficiently.',
-            intro: 'Project your enterprise’s consumption and GHG emissions to create an structured and adaptable action plan that will reduce your emissions progressively based on your business growth and reality.'
+            intro: 'Project your enterprise’s consumption and GHG emissions to create an structured and adaptable action plan that will reduce your emissions progressively based on your business growth and reality.',
+            tags: [
+                'Modern',
+                'Organic',
+                'Friendly'
+            ],
+            displaceItems: [
+                'DECARBONIZATION* CLIMATE CHANGE',
+                'INNOVATING SOLUTIONS',
+                'CREATING EXCELLENT RESULTS'
+            ]
         }
         this[1] = {
             name: 'CB- ETL Tool',
@@ -31,7 +43,16 @@ export class ProjectsList extends Array<IProject> {
             title: 'CB- ETL Tool',
             location: 'CBPI c.a, 2020 - ',
             motto: 'Enhancing data interpretation through enterprises with reliable data structures and processes.',
-            intro: 'An ETL tool developed in one simple and adaptable platform, designed for all the data-reliability needs your enterprise could have.'
+            intro: 'An ETL tool developed in one simple and adaptable platform, designed for all the data-reliability needs your enterprise could have.',
+            tags: [
+                'Data integration',
+                'ETL processes',
+                'User friendly'
+            ],
+            displaceItems: [
+                'ETL TOOL* DATA RELIABILITY*',
+                'CREATING EXCELLENT RESULTS',
+            ]
         }
         this[2] = {
             name: 'Swappinc',
@@ -41,7 +62,15 @@ export class ProjectsList extends Array<IProject> {
             title: 'Swappinc: Where the bartering experience succeeds',
             location: 'Swappinc c.a, 2023 - ',
             motto: 'Creating innovative, fun and adventurous experiencies.',
-            intro: 'Swappinc is the place where objects find the right value determined by the user through barter. In a fun, dynamic and organic way, Swappinc seeks to provide the user with a versatile and modern bartering platform.'
+            intro: 'Swappinc is the place where objects find the right value determined by the user through barter. In a fun, dynamic and organic way, Swappinc seeks to provide the user with a versatile and modern bartering platform.',
+            tags: [
+                'Bartering',
+                'Mobile app',
+                'Visual identity'
+            ],
+            displaceItems: [
+                'SWAPPINC*NO LO TIRES, CÁMBIALO*TRUEQUE',
+            ]
         }
         this[3] = {
             name: 'Karko Corp',
@@ -51,7 +80,15 @@ export class ProjectsList extends Array<IProject> {
             title: 'Karko Corp: The digital art supply shopping true experience',
             location: 'Study Case, 2019 - ',
             motto: 'Creating well-cared digital solutions for shopping experiences.',
-            intro: 'Innovating the shopping experience through design pattern solutions. A new experience for art supply shopping.'
+            intro: 'Innovating the shopping experience through design pattern solutions. A new experience for art supply shopping.',
+            tags: [
+                'Art supplies',
+                'Mobile app',
+                'UX design'
+            ],
+            displaceItems: [
+                'WHERE TO BUY ART SUPPLIES - NEVER MISS AN OFFERT-AART FOR EVERYONE!',
+            ]
         }
     }
 }

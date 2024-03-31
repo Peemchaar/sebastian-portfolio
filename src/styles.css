@@ -40,6 +40,12 @@
     font-weight: 600;
 }
 
+@font-face {
+    font-family: RajdhaniMedium;
+    src: url('assets/fonts/Rajdhani/Rajdhani-Medium.ttf');
+    font-weight: 500;
+}
+
 body{
     margin: 0;
 }
@@ -68,6 +74,10 @@ body{
 }
 .mulish-semiBold{
     font-family: 'MulishSemiBold' !important;
+}
+
+.rajdhani-medium{
+    font-family: 'RajdhaniMedium' !important;
 }
 
 /* ------FONT COLORS-------*/

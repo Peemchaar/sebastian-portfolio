@@ -1,5 +1,7 @@
 import { Component, Input } from '@angular/core';
+import { Router } from '@angular/router';
 import { IProject } from 'src/app/interfaces/project.interface';
+import { ProjectService } from 'src/app/services/project-service';
 
 @Component({
   selector: 'app-project-card-big',
@@ -9,8 +11,16 @@ import { IProject } from 'src/app/interfaces/project.interface';
 export class ProjectCardBigComponent {
   @Input() project: IProject | undefined;
 
-  constructor() { }
+  constructor(
+    private router: Router,
+    private projectService: ProjectService
+  ) { }
 
   ngOnInit(): void {
+  }
+
+  viewDetails(){
+    this.projectService.updatecurrentProject(this.project!)
+    this.router.navigate(['/projec-details']);
   }
 }

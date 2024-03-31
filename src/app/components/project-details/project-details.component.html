@@ -1,0 +1,43 @@
+<div class="main-container bg-primary-gradient">
+    <div class="brief-container ">
+        <div class="text-container">
+            <span class="title fira-bold color-white1">
+                {{project?.title}}
+            </span>
+            <div class="sub-title">
+                <span class="location nunito-regular color-white2">
+                    {{project?.location}}
+                </span>
+                <span class="motto nunito-light color-white2">
+                    {{project?.motto}}
+                </span>
+            </div>
+            <span class="intro nunito-regular color-white2">
+                {{project?.intro}}
+            </span>
+            <div class="tag-container">
+                <ng-container *ngFor="let item of project?.tags; let x = index">
+                    <div class="tag">
+                        <span class="text color-white2 rajdhani-medium">
+                            {{item}}
+                        </span>
+                    </div>
+                </ng-container>
+            </div>
+            
+        </div>
+        <div class="img-container">
+            <img src="{{project?.mainImage}}" alt="main_image">
+        </div>
+    </div>
+</div>
+<div class="displacer-container bg-dark4">
+    <div class="displacer" [ngClass]="project!.name == 'Karko Corp'  ? 'extended': ''">
+        <ng-container *ngFor="let item of project?.displaceItems; let x = index">
+            <span class="fira-medium color-white1 ">
+                {{item}}
+            </span>
+        </ng-container>
+    </div>
+</div>
+
