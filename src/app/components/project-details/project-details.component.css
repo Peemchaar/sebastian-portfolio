@@ -1,11 +1,11 @@
 
 .main-container{
-    padding-top: 71px;
+    padding-top: 48px;
 }
 .brief-container{
     display: flex;
     
-    justify-content: space-between;
+    justify-content: center;
     .text-container{
         padding-top: 44px;
         padding-left: 55px;
@@ -59,9 +59,10 @@
         max-height: 574px;
         display: flex;
         width: 50%;
-        justify-content: flex-end;
+        max-width: 1400px;
+        justify-content: flex-start;
         img{
-            width: 100%;
+            object-fit: cover;
         }
     }
 }
@@ -100,5 +101,74 @@
     }
     to {
       transform: translateX(-100%);
+    }
+}
+
+.project-info-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    .design-process{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 62px;
+        padding-left: 47px;
+        padding-right: 47px;
+        .title-container{
+            display: flex;
+            justify-content: flex-start;
+            gap: 8px;
+            .text{
+                font-size: 36px;
+                line-height: 40px;
+            }
+            .step-container{
+                height: 36px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 12px;
+                background-color: #DEE2E614;
+                padding: 0px 12px;
+                .text{
+                    font-size: 12px;
+                    line-height: 37px;
+                    align-self: center;
+                }
+            }
+        }
+        .steps-container{
+            margin-top: 68px;
+            display: flex;
+            gap: 8px;
+            
+            .step{
+                min-width: 158px;
+                max-width: 158px;
+                min-height: 158px;
+                max-height: 158px;
+                border-radius: 155px;
+                background-color: #CED4DA1F;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .gapper{
+                min-width: 55px;
+                max-width: 55px;
+                max-height: 2px;
+                border-bottom: 1px solid #ADB5BD;
+                align-self: center;
+            }
+        }
+    }
+    .main-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin-top: 105px;
+        padding-left: 47px;
+        padding-right: 47px;
     }
 }
