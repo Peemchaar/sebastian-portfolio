@@ -104,10 +104,17 @@
     }
 }
 
+.wrapper-container{
+    display: flex;
+    justify-content: center;
+}
+
 .project-info-container{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    width: 100%;
+    max-width: 1937px;
     .design-process{
         display: flex;
         flex-direction: column;
@@ -142,7 +149,7 @@
             margin-top: 68px;
             display: flex;
             gap: 8px;
-            
+            justify-content: space-between;
             .step{
                 min-width: 158px;
                 max-width: 158px;
@@ -153,6 +160,10 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                transition: .4s;
+            }
+            .step:hover{
+                background-color: #ced4da36;
             }
             .gapper{
                 min-width: 55px;
@@ -165,10 +176,190 @@
     }
     .main-container{
         display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
+        justify-content: center;
         margin-top: 105px;
         padding-left: 47px;
         padding-right: 47px;
+        gap: 36px;
+        .scrollable-container{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            min-height: 800px;
+            max-height: 800px;
+            overflow: hidden;
+            .scrollable-div{
+                width: 100%;
+                overflow: auto;
+                padding-right: 0px;
+            }
+            .scrollable-div::-webkit-scrollbar{
+                display: none;
+            }
+            .bento-container{
+                display: flex;
+                justify-content: center;
+                padding-bottom: 48px;
+                border-bottom: 1px solid #ADB5BD;
+                .vertical{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    .role{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-start;
+                        border-radius: 12px;
+                        padding: 12px;
+                        max-width: 286px;
+                        max-height: 153px;
+                        min-width: 286px;
+                        min-height: 153px;
+                        background-color: #CED4DA1F;
+                        .title{
+                            font-size: 24px;
+                            line-height: 40px;
+                        }
+                        .name{
+                            margin-top: 10px;
+                            font-size: 16px;
+                            line-height: 40px;
+                        }
+                        .tasks{
+                            font-size: 16px;
+                            line-height: 16px;
+                        }
+                    }
+                    .organization{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-start;
+                        border-radius: 12px;
+                        padding: 12px;
+                        max-width: 286px;
+                        max-height: 112px;
+                        min-width: 286px;
+                        min-height: 112px;
+                        background-color: #CED4DA1F;
+                        .type{
+                            font-size: 24px;
+                            line-height: 40px;
+                            margin-bottom: 10px;
+                        }
+                        .name{
+                            font-size: 16px;
+                            line-height: 30px;
+                        }
+                    }
+                }
+                .overview{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    border-radius: 12px;
+                    margin-left: 36px;
+                    padding: 12px;
+                    max-width: 803px;
+                    max-height: 299px;
+                    min-width: 803px;
+                    min-height: 299px;
+                    background-color: #CED4DA1F;
+                    .title{
+                        font-size: 24px;
+                        line-height: 40px;
+                    }
+                    .primary{
+                        margin-top: 16px;
+                        margin-bottom: 16px;
+                        font-size: 14px;
+                        line-height: 16px;
+                    }
+                    .secondary{
+                        font-size: 14px;
+                        line-height: 16px;
+                    }
+                }
+            }
+            .detailed-step-container{
+                display: flex;
+                justify-content: center;
+                padding-bottom: 80px;
+                gap: 18px;
+                padding-top: 80px;
+                border-bottom: 1px solid #ADB5BD;
+                .title-container{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    min-width: 328px;
+                    max-width: 328px;
+                    .section{
+                        font-size: 12px;
+                    }
+                    .title{
+                        font-size: 28px;
+                        line-height: 30px;
+                    }
+                }
+                .content{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    min-width: 827px;
+                    max-width: 827px;
+                    .primary-image{
+                        margin-bottom: 24px;
+                    }
+                    .primary-image{
+                        margin-bottom: 24px;
+                    }
+                    .primary-text{
+                        font-size: 16px;
+                        line-height: 19px;
+                        margin-bottom: 16px;
+                    }
+                    .secondary-text{
+                        font-size: 12px;
+                        line-height: 14px;
+                        margin-bottom: 24px;
+                    }
+                    .list{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-start;
+                        gap: 8px;
+                        .title{
+                            font-size: 16px;
+                            line-height: 19px;
+                        }
+                        .list-item{
+                            font-size: 12px;
+                            line-height: 14px;
+                        }
+                    }
+                }
+            }
+        }
+        .navigator{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            min-width: 120px;
+            max-width: 120px;
+        }
+        .navigator{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            .nav-item{
+                font-size: 16px;
+                line-height: 40px;
+                transition: .4s;
+                cursor: pointer;
+            }
+            .nav-item:hover{
+                color: #F8F9FA !important;
+            }
+        }
     }
 }
