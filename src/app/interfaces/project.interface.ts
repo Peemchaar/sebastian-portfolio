@@ -26,6 +26,8 @@ export interface IProject {
         }
     }
     detailed_steps: IDetailedStep[]
+    animated_gifs: string[] | null
+    aditional_content: string[]
 }
 
 export interface IDetailedStep {
@@ -37,7 +39,7 @@ export interface IDetailedStep {
     secondary_text: string
     list: {
         title: string
-        list_items: string[]
+        list_items: string[] 
     }
 }
 
@@ -134,7 +136,82 @@ export class ProjectsList extends Array<IProject> {
                             '-Digital mockups of several components constructed by the specified product manual’s rules. ',
                         ]
                     }
+                },
+                {
+                    name: 'Architecture',
+                    title: 'Product architecture',
+                    primary_image:  '../../assets/img/carbon_journey/step3_primary.svg',
+                    secondary_image: null,
+                    primary_text: 'The definition of the architecture of our product would let us organize our ideas around it to visualize how we can make them reality. Knowing which are our brand core points and intentions, we would be capable to concrete a highly effective Product Architecture that could satisfy all our brand and product needs always thinking in scaling, adaptability and growth. And from here, start building our decarbonization software.',
+                    secondary_text: 'Our product architecture was thought to grow and adapt satisfying our several product needs regarding our goal. As a decarbonization tool, the user flow that our customers has to accomplish to identify the value of our product was, before CarbonJourney, really complex and long. Reorganizing and adapting this process within a digital software proposal and with significant design insights, this process of data recollection reduces its difficulty considerably and make more effective the user usage of our tool. For this, we re-structure the architecture of CarbonJourney registration basis and how this flow could satisfy our data needs in order to cast several validated environmental analytics and, also, making sure that at least almost every enterprise, no matter its reality and growth, could find his customizable space within our tool.',
+                    list: {
+                        title: 'Product architecture results:',
+                        list_items: [
+                            '-A product architecture prepared for growth and scaling through time',
+                            '-Powerful insights through simple data collection processes',
+                            '-Satisfy direct and indirect needs from a decarbonization system within a digital solution.',
+                            '-A less difficult decarbonization system establishment to enhance and augment through easy systems decarbonization processes around the globe',
+                            '-Basis for next user flows and wireframes that will make us convey our product architecture digitally and functionally',
+                        ]
+                    }
+                },
+                {
+                    name: 'Wireframing',
+                    title: 'User flows and Wireframes',
+                    primary_image:  '../../assets/img/carbon_journey/step4_primary.svg',
+                    secondary_image: null,
+                    primary_text: 'With the product architecture and visual identity defined, we started proposing user flows sketches in order to find the best path that guarantee the success of the user within the features of our product, meanwhile conveying an enriched perception through visual sense of our brand construction visual identity criteria giving to our users an unique and well-cared distinctive experience.',
+                    secondary_text: 'Once the user flows are approved and created through the 3 steps design cycle (identify, design, iterate), we proceeded creating base wireframes that will stablish what we expect to happen within our application when some user is trying to do certain action. In this way, defined all the actions that are we are going to construct through several user flows that are within our product functionalities, we will be able to approved the final design plan to translate such simpler UX wireframes into final UI/UX prototypes ready for implementation. ',
+                    list: {
+                        title: 'User flows and Wireframes results:',
+                        list_items: [
+                            '-An structured and responsive design plan and layout for our product',
+                            '-Stablish selected design patterns suited for the needs of our product and the preferences of our costumer, aligned with the implementation capacities in the team',
+                            '-Base wireframes for final art prototypes ready to implement',
+                            '-Enriched debate between development team and design, quantification of needed components and screens for development',
+                        ]
+                    }
+                },
+                {
+                    name: 'Results',
+                    title: 'Design system',
+                    primary_image:  '../../assets/img/carbon_journey/step5_primary.svg',
+                    secondary_image: null,
+                    primary_text: 'With Atomic Design methodology we built a collection of repeatable components and a set of standardized guidelines for the use of these. As a big box of UI and UX Lego pieces, through CarbonJourney Design system we will be able to discover new possibilities to implement in our digital product successfully. All this aligned with our brand visual identity criteria and UX Wireframes defined strategy.  ',
+                    secondary_text: 'Our design system concretes the colour palette for digital purposes and extended typography system aligned with interaction design and patterns. In this way, we translate our UX Wireframes paths and flows in a stylish outcome that convey our brand visual identity guide lines. Also, we adjust the tone of our brand through its graphic resource: the UI platform where the UX magic happens and where we collect the most valuable feedback of our users. Now we are ready to scale an make better our product through time and testing.',
+                    list: {
+                        title: 'Design system results:',
+                        list_items: [
+                            '-Colour Palette for digital product building',
+                            '-Typography system for digital product building',
+                            '-Reusable components created with atomic design methodology',
+                            '-UX/UI resources to elaborate final art screens and UX flows aligned with brand´s visual identity',
+                        ]
+                    }
+                },
+                {
+                    name: 'Results',
+                    title: 'Final art',
+                    primary_image:  null,
+                    secondary_image: null,
+                    primary_text: 'The Final Art and layout is the refinement of all the previous work resulting in a well-cared design system that englobes and accomplish all the pointed needs of our product regarding of what we want to create and how we can do it for. In this way, the Final Art is the product of all the previous steps that guaranteed the success of our product design achievement.',
+                    secondary_text: 'Once the user flows are approved and created through the 3 steps design cycle (Build, Measure, Learn), we proceeded creating base final wireframes that will establish what we expect to happen within our application when some user is trying to do certain action. In this way, defined all the actions that are we are going to construct through several user flows that are within our product functionalities, we will be able to approve the final design plan to translate such simpler UX wireframes into final UI/UX prototypes ready for implementation. ',
+                    list: {
+                        title: 'Final Art results:',
+                        list_items: [
+                            '-Layout and component’s assemble to define our final design structure all over our digital product',
+                            '-Bulk of digital resources such as videos, images, loaders, microinteractions and microanimations to enhance the user experience',
+                            '-Final Design prototype ready for development implementation based on Wireframes prototype logics',
+                        ]
+                    }
                 }
+            ],
+            animated_gifs: [
+                '../../assets/img/carbon_journey/carbon_1_gif.gif',
+                '../../assets/img/carbon_journey/carbon_2_gif.gif',
+            ],
+            aditional_content: [
+                '../../assets/img/carbon_journey/aditional_1.svg',
             ]
         } 
 
@@ -142,7 +219,7 @@ export class ProjectsList extends Array<IProject> {
             name: 'CB- ETL Tool',
             cardImage: '../../assets/img/cbpi/cbpi_card.svg',
             mainImage: '../../assets/img/cbpi/cbpi_large.svg',
-            mainPNG: '../../assets/img/carbon_journey/graphic.png',
+            mainPNG: '../../assets/img/cbpi/graphic.png',
             country: 'Mexico',
             title: 'CB- ETL Tool',
             location: 'CBPI c.a, 2020 - ',
@@ -201,14 +278,96 @@ export class ProjectsList extends Array<IProject> {
                             '-The objective of this product was to be a SaaS for enterprise around the globe, nevertheless, it was built as a one-organization product.',
                         ]
                     }
-                }
+                },
+                {
+                    name: 'Architecture',
+                    title: 'Navigation structure map',
+                    primary_image:  '../../assets/img/cbpi/step2_primary.svg',
+                    secondary_image: null,
+                    primary_text: 'Our first approximation to this project was to build a navigations structure of the old design to identify which were the needs and flows that we needed to re-design, in this way, we would not miss any interaction of the previous design meanwhile we recognize the old-version design structure, that has not any documentation in that moment. ',
+                    secondary_text: 'We also needed to create a new logo, select new brand colours and typographies, but after studying the structure and infrastructure of our old-version product. Once identified the interaction possibilities, flows and actions that an user should take in a tool such like this, we proceeded to create user flows, re-thinking which were the best UX practices possibilities to let the user accomplish its objective in a simplified and intuitive interaction. There was a lot to think about how we could achieve this, once we built the Navigation Structure of this application.',
+                    list: {
+                        title: 'Navigation structure results:',
+                        list_items: [
+                            '-There were several user actions that needs to be better resolved in terms of user experience.',
+                            '-There was unknown interactions that could be dismissed or repositioned.',
+                            '-Some actions appears not to be organic to the most type of enterprises, because the first specialized one-organization built of the product.',
+                            '-There were usability and accessibility problems in typography and colour harmonies. ',
+                        ]
+                    }
+                },
+                {
+                    name: 'Wireframing',
+                    title: 'User flows and wireframing',
+                    primary_image:  '../../assets/img/cbpi/step3_primary.svg',
+                    secondary_image: '../../assets/img/cbpi/step3_secondary.svg',
+                    primary_text: 'Once identified the main actions that the user takes with the Navigation Structure Map definition, we started building several user flows to better understand these actions and how the user could accomplish them without difficulties, recreating the old user flows for renewed paths that were enhanced by UX better practices and patterns.',
+                    secondary_text: 'There were a high quantity of user interactions to represent in our user flows, creating both mobile and desktop design, there were little modifications on the number of steps that a user need to take to accomplish its objective within the most complex actions. By the nature of this tool, there were also several functionalities that were not contemplated in the previous design, taking in consideration the available launching time and development forces, we could add some of these functionalities to our redesign.',
+                    list: {
+                        title: 'User flows & wireframes discoveries:',
+                        list_items: [
+                            '-A complete rethinking of the old version design.',
+                            '-Better, simplified and shorted user flows paths in several user actions.',
+                            '-New design patterns added to enhance user experience.',
+                            '-A concrete plan to start building the final design in mobile and desktop solutions.',
+                            '-Better responsiveness between screens. ',
+                            '-A more visual data dashboards to better represent the data integration processes. ',
+                        ]
+                    }
+                },
+                {
+                    name: 'Results',
+                    title: 'Design system',
+                    primary_image:  '../../assets/img/cbpi/step4_primary.svg',
+                    secondary_image: null,
+                    primary_text: 'With Atomic Design methodology we built a collection of repeatable components and a set of standardized guidelines for the use of these. With CB Design system we want to enhance the organic scaling of this product, once built as one-organization tool aiming to be a general SaaS in the market. All this aligned with a new brand visual identity and UX Wireframes defined strategy.',
+                    secondary_text: 'Our design system establish the colour palette and a extended typography system aligned with some added interaction designs and patterns. We translate our built UX Wireframes paths and flows in a stylish outcome that enhances the previous design version from where we are working on. We elaborate a detailed user resources to correct the previous brand usage taking in consideration our main brand values and philosophy, represented in our new brand logo, hoping that, with this, the UX and UI design will highly improve.',
+                    list: {
+                        title: 'Design system results:',
+                        list_items: [
+                            '-Colour Palette for digital product building.',
+                            '-Typography system for digital product building.',
+                            '-Reusable components created with atomic design methodology.',
+                            '-UX/UI resources to elaborate final art screens and UX flows aligned with brand´s visual identity.',
+                            '-A bunch of components that will enhance our user experience and UI visuals.',
+                            '-An established behaviour expectation from the platform.',
+                            '-A better understanding of our product capabilities and functiontalities.',
+                        ]
+                    }
+                },
+                {
+                    name: 'Results',
+                    title: 'Final art',
+                    primary_image:  null,
+                    secondary_image: null,
+                    primary_text: 'The Final Art is the product of all the previous steps that guaranteed the success of our redesign. At this point CB was basically built and beyond the old-design capabilities and functionalities. Adding new design patterns, better UX practices and UI visualization, CB was ready to accomplish it tasks with a rebranded platforms that suits better to the software objectives.',
+                    secondary_text: 'With the final art wireframes, we could establish a detailed execution plan for developers and designers, scalable at the future and organically enough to support all sort of changes and iterations without affecting our visual identity. With a more intuitive and simple version of our product, CB was ready to deploy it data integration functionalities with better aesthetics, accessibility and usability. ',
+                    list: {
+                        title: 'Final art results:',
+                        list_items: [
+                            '-Layout and component´s assemble to define our final design structure all over our digital product.',
+                            '-Bulk of digital resources such as videos, images, loaders, microinteractions and microanimations to enhance the user experience.',
+                            '-Final Design prototype ready for development implementation based on Wireframes prototype logics.',
+                            '-A complete redesign of previous user flows and visuals. ',
+                            '-A better user experience with better design patterns and UI visuals.',
+                        ]
+                    }
+                },
+            ],
+            animated_gifs: [
+                '../../assets/img/carbon_journey/carbon_1_gif.gif',
+                '../../assets/img/carbon_journey/carbon_2_gif.gif',
+            ],
+            aditional_content: [
+                '../../assets/img/carbon_journey/aditional_1.svg',
             ]
         }
+
         this[2] = {
             name: 'Swappinc',
             cardImage: '../../assets/img/swappinc/swappinc_card.svg',
             mainImage: '../../assets/img/swappinc/swappinc_large.svg',
-            mainPNG: '../../assets/img/carbon_journey/graphic.png',
+            mainPNG: '../../assets/img/swappinc/graphic.png',
             country: 'Spain',
             title: 'Swappinc: Where the bartering experience succeeds',
             location: 'Swappinc c.a, 2023 - ',
@@ -265,14 +424,77 @@ export class ProjectsList extends Array<IProject> {
                             '-Profound understanding of the brand image guidelines to take in consideration in every graphic resource. ',
                         ]
                     }
-                }
+                },
+                {
+                    name: 'Logo construction',
+                    title: 'Construction reticule',
+                    primary_image:  '../../assets/img/swappinc/step2_primary.svg',
+                    secondary_image: null,
+                    primary_text: 'Reticules are everywhere in design world, they are structured layouts that let us organize formal assets such as logos, screens and webpages, they are useful for many purposes, for that they are a must to know to every designer no matter in which specialty they are developed. We use this technique for Swappinc logo construction to achieve a fun, dynamic and unique representative Isotype.',
+                    secondary_text: 'The Swappinc isotype is built through a primary grid on an odd total of modules on the X axis and the Y axis, guaranteeing a central module between both axes as a balance point for a body whose shape seeks to transmit movement and exchange. Our client was specially attracted to unique isotypes as graphical representations of branches and movements, preserving a minimalist but also striking approach through organic forms that lend us dynamism and interest.',
+                    list: {
+                        title: 'Construction reticule results:',
+                        list_items: [
+                            '-Structured Isotype with a sense of symmetry and proportion that ease the graphic perception of the symbol.',
+                            '-Icon that formally conveys dynamism, nature, uniqueness, and bartering.',
+                            '-A convenient Isotype from where start building our branch architecture and visual identity.',
+                            '-Minimum image of our branch. ',
+                        ]
+                    }
+                },
+                {
+                    name: 'Visual identity',
+                    title: 'Visual identity establishment',
+                    primary_image:  '../../assets/img/swappinc/step3_primary.svg',
+                    secondary_image: null,
+                    primary_text: 'The visual identity of a branch is a compound of several graphic resources that resembles our branch concept visually. There are several resources that a designer can use for this purpose, such as typography, colour, values, nuisances and much more. The construct of a visual identity is going to depend into the brand needs as product, therefore, visual identities are often grown diversely by product.',
+                    secondary_text: 'For Swappinc our visual identity must convey what research data give to us as designers, with striking and unique colours that also will create transitioning effects easily in an harmonic relation, a dynamic and versatile typographies that serve us depending on functionality and purpose and much more other graphical assets that can be built with those product’s rules.',
+                    list: {
+                        title: 'Visual Identity discoveries:',
+                        list_items: [
+                            '-An harmonic colour relation through complementary nuisances would fit perfectly on our brand concept perception.',
+                            '-Transitioning states between colours and typographies must be developed in order to convey functionality and movement.',
+                            '-Typographies must be versatile in every moment to allow us convey hierarchies and more between texts and components.',
+                            '-Neutral colours must fit harmonically with our primary and secondary colours. ',
+                            '-Values and temperatures must be considered within our brand visual representation at all times.'
+                        ]
+                    }
+                },
+                {
+                    name: 'Results',
+                    title: 'Product manual',
+                    primary_image:  null,
+                    secondary_image: '../../assets/img/swappinc/step4_secondary.svg',
+                    primary_text: 'A product manual is a compendium of graphical rules that must be applied if we want to convey through visuals a brand’s concepts, these can be played in a limited way, but always must serve as floor for creativity and innovation through unique solutions. They are not stretched parcels that cannot be  surpassed, they are the base of creativity and growth. ',
+                    secondary_text: 'Swappinc Product’s Manual is just the beginning of the brand’s visual assets construction, it was built as a fertile base for creativity and uniqueness, as it brand’s concept stablish: it is a creativity core that must be always in movement providing a fulfilling experience through change. The delicate relations through concepts were always our main core from where all other derivatives came from, this will guarantee a profound connection networking over stablished concepts discovered on research and insight.',
+                    list: {
+                        title: 'Product manual results:',
+                        list_items: [
+                            '-Colour Palette Establishment.',
+                            '-Corporate Typography Establishment.',
+                            '-Logo Versions Establishment.',
+                            '-Logo Construction Explanation.',
+                            '-Safe Zone Establishment.',
+                            '-Fertile Base for future innovations and creative solutions through expected Digital Products. ',
+                            '-A better understanding of our product visual identity and identity itself.',
+                        ]
+                    }
+                },
+            ],
+            animated_gifs: [
+                '../../assets/img/carbon_journey/carbon_1_gif.gif',
+                '../../assets/img/carbon_journey/carbon_2_gif.gif',
+            ],
+            aditional_content: [
+                '../../assets/img/carbon_journey/aditional_1.svg',
             ]
         }
+
         this[3] = {
             name: 'Karko Corp',
             cardImage: '../../assets/img/karko/karko_card.svg',
             mainImage: '../../assets/img/karko/karko_large.svg',
-            mainPNG: '../../assets/img/carbon_journey/graphic.png',
+            mainPNG: '../../assets/img/karko/graphic.png',
             country: 'Venezuela',
             title: 'Karko Corp: The digital art supply shopping true experience',
             location: 'Study Case, 2019 - ',
@@ -328,7 +550,82 @@ export class ProjectsList extends Array<IProject> {
                             '-A turquoise palette was ideal for our brand concept, searching for an organic and sustainable approach.',
                         ]
                     }
-                }
+                },
+                {
+                    name: 'Architecture',
+                    title: 'Navigation structure map',
+                    primary_image:  '../../assets/img/karko/step2_primary.svg',
+                    secondary_image: null,
+                    primary_text: 'A navigation structure function as a first visualization of our possible user paths and actions, with a hierarchy system from top to bottom that tell us which parts are more important than others. It must not be followed exactly as it was constructed on the first time, because when developing a product design this hierarchy could change or be refined through experience. ',
+                    secondary_text: 'Karko Corp Navigation Map was built in two profound levels, it is a simple navigation map that does not imply excessively profound paths possibilities, making the user experience less complicated in a less massive digital product, something that examples as Amazon lacks. Karko Corp was meant to be built as an optimal space for shopping, without adding unnecessary features that only complicates the user experience. ',
+                    list: {
+                        title: 'Navigation structure map results:',
+                        list_items: [
+                            '-General visualization of our product through hierarchical syntax.',
+                            '-Identify possible user paths to access several branches of our product.',
+                            '-First approximation to where we can build user experience solutions and interfaces.',
+                            '-Discovery of several branches within our digital product structure.',
+                        ]
+                    }
+                },
+                {
+                    name: 'Wireframing',
+                    title: 'User flows and Wireframing',
+                    primary_image:  '../../assets/img/karko/step3_primary.svg',
+                    secondary_image: '../../assets/img/karko/step3_secondary.svg',
+                    primary_text: 'Once identified the main actions that the user takes with the Navigation Structure Map definition, we started building several user flows to better understand these actions and how the user could accomplish them without difficulties, establishing design patterns that best fits to our product development and purpose, a seamlessly experience to shopping art supplies.',
+                    secondary_text: 'With Navigation Map Structure discoveries we could find various user flows to fulfil in our product, for that purpose we needed a process visualization of these steps represented in User Flows and translated into prototyped UX Wireframes. These wireframes allow us to better understand our product experience reality and also discover new possible solutions through on-road resolutions. Here we applied our three steps process: Identify - Design - Iterate, until encounter the most convenient match for our product.',
+                    list: {
+                        title: 'User flows and Wireframes results:',
+                        list_items: [
+                            '-An structured and responsive design plan and layout for our product.',
+                            '-Identified design patterns to use in our product.',
+                            '-Visualization of the user path that we proposed within prototyped Wireframes.',
+                            '-Base wireframes for final art prototypes ready to implement',
+                            '-Insightful debate to discover new creative solutions to our experience design problems.',
+                        ]
+                    }
+                },
+                {
+                    name: 'Results',
+                    title: 'Design system',
+                    primary_image:  '../../assets/img/karko/step4_primary.svg',
+                    secondary_image: null,
+                    primary_text: 'Karko Corp component’s building was thought as a iconic identifier of the branch in every aspect. These components were built by specific Design System rules such as typography and colour hierarchy. With from scratch icons implemented in our design as fast concept communication through minimum denotations. ',
+                    secondary_text: 'This design system concretes a colour palette for digital purposes and extended typography system aligned with original interaction design and patterns. Translating the built UX Wireframes paths and flows in a stylish outcome that convey Karko Corp’s brand visual identity. We applied several shopping most-used design patterns found in Amazon, Shopify, and others as example of success.',
+                    list: {
+                        title: 'Design system results:',
+                        list_items: [
+                            '-Colour Palette for digital product building',
+                            '-Typography system for digital product building',
+                            '-Components created through brand guidelines with original outcomes',
+                            '-UX/UI resources to elaborate final art screens and UX flows aligned with brand´s visual identity',
+                        ]
+                    }
+                },
+                {
+                    name: 'Results',
+                    title: 'Final art',
+                    primary_image:  null,
+                    secondary_image: null,
+                    primary_text: 'The Final Art and layout is the refinement of all the previous work resulting in a well-cared design system that englobes and accomplish all the pointed needs of our product regarding of what we want to create and how we can do it for. In this way, the Final Art is the product of all the previous steps that guaranteed the success of our product design achievement. ',
+                    secondary_text: 'Karko Corp’s Final Art outcome is constituted in numerous final art layouts and wireframes ready to be implemented by a web development team or IT programmers. Some of them were dynamic approaches from previous complicated proposes, enhancing the user experience significantly. The outcome was specially meaningful regarding personal learning and experience. ',
+                    list: {
+                        title: 'Final art results:',
+                        list_items: [
+                            '-Layout and component’s assemble to define our final design structure all over our digital product',
+                            '-Bulk of digital resources such as videos, images, loaders, microinteractions and microanimations to enhance the user experience',
+                            '-Final Design prototype ready for development implementation based on Wireframes prototype logics',
+                        ]
+                    }
+                },
+            ],
+            animated_gifs: [
+                '../../assets/img/carbon_journey/carbon_1_gif.gif',
+                '../../assets/img/carbon_journey/carbon_2_gif.gif',
+            ],
+            aditional_content: [
+                '../../assets/img/carbon_journey/aditional_1.svg',
             ]
         }
     }

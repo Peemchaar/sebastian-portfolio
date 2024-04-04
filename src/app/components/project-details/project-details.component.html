@@ -108,7 +108,7 @@
                         </div>
                     </div>
                     <ng-container *ngFor="let detailedStep of project?.detailed_steps">
-                        <div class="detailed-step-container" [id]="detailedStep.name">
+                        <div class="detailed-step-container" [id]="detailedStep.name" [ngClass]="detailedStep!.name != 'Results'  ? 'divider': ''">
                             
                             <div class="title-container">
                                 <span class="section fira-light color-medium3">
@@ -153,7 +153,27 @@
                 </ng-container>
             </div>
         </div>
+        <div class="carbon-animated-container" *ngIf="project?.name == 'CarbonJourney'">
+            <div class="primary-gif-container">
+                <img src="{{project?.animated_gifs![0]}}" alt="gif1">
+            </div>
+            
+            <div class="second-container">
+                <span class="text fira-medium color-white1">
+                    Out of the box solutions, <br> The best simple results
+                </span>
+                <div class="secondary-gif-container">
+                    <img src="{{project?.animated_gifs![1]}}" alt="gif2">
+                </div>
+                
+            </div>
+        </div>
+        
     </div>
+</div>
+
+<div class="aditional-content bg-primary-gradient ">
+    <img src="{{project?.aditional_content![0]}}" alt="aditional1">
 </div>
 
 

@@ -56,7 +56,7 @@
         }
     }
     .img-container{
-        max-height: 574px;
+        max-height: 650px;
         display: flex;
         width: 50%;
         max-width: 1400px;
@@ -280,13 +280,13 @@
                     }
                 }
             }
+            
             .detailed-step-container{
                 display: flex;
                 justify-content: center;
-                padding-bottom: 80px;
                 gap: 18px;
-                padding-top: 80px;
-                border-bottom: 1px solid #ADB5BD;
+                padding-bottom: 40px;
+                padding-top: 40px;
                 .title-container{
                     display: flex;
                     flex-direction: column;
@@ -310,7 +310,7 @@
                     .primary-image{
                         margin-bottom: 24px;
                     }
-                    .primary-image{
+                    .secondary-image{
                         margin-bottom: 24px;
                     }
                     .primary-text{
@@ -339,6 +339,11 @@
                     }
                 }
             }
+            .detailed-step-container.divider{
+                padding-bottom: 80px !important;
+                padding-top: 80px !important;
+                border-bottom: 1px solid #ADB5BD;
+            }
         }
         .navigator{
             display: flex;
@@ -361,5 +366,71 @@
                 color: #F8F9FA !important;
             }
         }
+    }
+
+    @keyframes move {
+        from {
+          transform: translateX(20%);
+          transform: translatey(20%);
+        }
+        50% {
+            transform: translateX(-20%);
+            transform: translatey(-20%);
+        }
+
+        to{
+            transform: translateX(20%);
+            transform: translatey(20%);
+        }
+        
+    }
+
+    .carbon-animated-container{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 57px;
+        margin-top: 34px;
+        .primary-gif-container{
+            display: flex;
+            justify-content: center;
+            min-width: 641px;
+            max-width: 641px;
+            max-height: 665px;
+            img{
+                width: 150%;
+                height: 110%;
+            }
+        }
+        .second-container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            .text{
+                margin-left: 53px;
+                font-size: 44px;
+                line-height: 47px;
+            }
+            .secondary-gif-container{
+                min-width: 659px;
+                max-width: 659px;
+                max-height: 461px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                img{
+                    width: 125%;
+                    height: 125%;
+                }
+            }
+        }
+    }
+}
+
+.aditional-content{
+    padding-bottom:  80px;
+    width: 100%;
+    overflow: hidden;
+    img{
+        width: 100%;
     }
 }
