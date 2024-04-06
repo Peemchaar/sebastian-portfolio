@@ -1,0 +1,258 @@
+<div class="main-container bg-primary-gradient">
+    <div class="brief-container ">
+        <div class="text-container">
+            <span class="title fira-bold color-white1">
+                {{project?.title}}
+            </span>
+            <div class="sub-title">
+                <span class="location nunito-regular color-white2">
+                    {{project?.location}}
+                </span>
+                <span class="motto nunito-light color-white2">
+                    {{project?.motto}}
+                </span>
+            </div>
+            <span class="intro nunito-regular color-white2">
+                {{project?.intro}}
+            </span>
+            <div class="tag-container">
+                <ng-container *ngFor="let item of project?.tags; let x = index">
+                    <div class="tag">
+                        <span class="text color-white2 rajdhani-medium">
+                            {{item}}
+                        </span>
+                    </div>
+                </ng-container>
+            </div>
+        </div>
+        <div class="img-container">
+            <img src="{{project?.mainPNG}}" alt="main_image">
+        </div>
+    </div>
+</div>
+<div class="displacer-container bg-dark4">
+    <div class="displacer" [ngClass]="project!.name == 'Karko Corp'  ? 'extended': ''">
+        <ng-container *ngFor="let item of project?.displaceItems; let x = index">
+            <span class="fira-medium color-white1 ">
+                {{item}}
+            </span>
+        </ng-container>
+    </div>
+</div>
+<div class="wrapper-container bg-primary-gradient">
+    <div class="project-info-container ">
+        <div class="design-process">
+            <div class="title-container">
+                <span class="text fira-medium color-white1">
+                    Design process
+                </span>
+                <div class="step-container">
+                    <span class="text fira-light color-white1">
+                        {{project?.design_process?.steps?.length}} Steps
+                    </span>
+                </div>
+            </div>
+            <div class="steps-container">
+                <ng-container *ngFor="let step of project?.design_process?.steps; let x = index">
+                    <div class="step">
+                        <span class="text fira-medium color-white1">
+                            {{step}}
+                        </span>
+                    </div>
+                    <div class="gapper" *ngIf="(x + 1) < project?.design_process?.steps?.length!">
+                        
+                    </div>
+                </ng-container>
+            </div>
+        </div>
+    
+        <div class="main-container">
+            <div class="scrollable-container">
+                <div class="scrollable-div">
+                    <div class="bento-container">
+                        <div class="vertical">
+                            <div class="role">
+                                <span class="title fira-medium color-white1">
+                                    My role
+                                </span>
+                                <span class="name nunito-regular color-white1">
+                                    {{project?.design_process?.role?.name}}
+                                </span>
+                                <span class="tasks nunito-light color-white2">
+                                    {{project?.design_process?.role?.tasks}}
+                                </span>
+                            </div>
+                            <div class="organization">
+                                <span class="type fira-medium color-white1">
+                                    {{project?.design_process?.client?.type}}
+                                </span>
+                                <ng-container *ngFor="let client of project?.design_process?.client?.name">
+                                    <span class="name nunito-regular color-white1">
+                                        {{client}}
+                                    </span>
+                                </ng-container>
+                            </div>
+                        </div>
+                        <div class="overview">
+                            <span class="title fira-medium color-white1">
+                                Overview
+                            </span>
+                            <span class="primary libre-semiBold color-white2">
+                                {{project?.design_process?.overview?.primary}}
+                            </span>
+                            <ng-container *ngFor="let text of project?.design_process?.overview?.secondary">
+                                <span class="secondary nunito-light color-white2">
+                                    {{text}}
+                                </span>
+                            </ng-container>
+                        </div>
+                    </div>
+                    <ng-container *ngFor="let detailedStep of project?.detailed_steps">
+                        <div class="detailed-step-container" [id]="detailedStep.name" [ngClass]="detailedStep!.name != 'Results'  ? 'divider': ''">
+                            
+                            <div class="title-container">
+                                <span class="section fira-light color-medium3">
+                                    {{detailedStep.name}}
+                                </span>
+                                <span class="title fira-medium color-white1">
+                                    {{detailedStep.title}}
+                                </span>
+                            </div>
+                            <div class="content">
+                                <img src="{{detailedStep.primary_image}}" alt="primary_image" class="primary-image" *ngIf="detailedStep.primary_image != null">
+                                <span class="primary-text libre-semiBold color-white2">
+                                    {{detailedStep.primary_text}}
+                                </span>
+                                <span class="secondary-text nunito-regular color-white2">
+                                    {{detailedStep.secondary_text}}
+                                </span>
+                                <img src="{{detailedStep.secondary_image}}" alt="secondary_image" class="secondary-image" *ngIf="detailedStep.secondary_image != null">
+                                <div class="list">
+                                    <span class="title libre-semiBold color-white2">
+                                        {{detailedStep.list.title}}
+                                    </span>
+                                    <ng-container *ngFor="let item of detailedStep.list.list_items">
+                                        <span class="list-item nunito-light color-white2">
+                                            {{item}}
+                                        </span>
+                                    </ng-container>
+                                </div>
+                            </div>
+                        </div>
+                    </ng-container>
+                </div>
+            </div>
+            <div class="navigator">
+                <span class="nav-item nunito color-medium3 nunito-semiBold">
+                    Overview
+                </span>
+                <ng-container *ngFor="let step of project?.design_process?.steps; let x = index">
+                    <span class="nav-item nunito color-medium3 nunito-semiBold">
+                        {{step}}
+                    </span>
+                </ng-container>
+            </div>
+        </div>
+        <div class="cbpi-animated-container" *ngIf="project?.name == 'CB- ETL Tool'">
+            <div class="primary-gif-container">
+                <img src="{{project?.animated_gifs![0]}}" alt="gif1">
+            </div>
+            <div class="second-container">
+                <img src="{{project?.animated_gifs![1]}}" alt="">
+                <span class="text fira-medium color-white1">
+                    Simple ETL flows through <br> creative design solutions
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="aditional-content bg-primary-gradient ">
+    <img src="{{project?.aditional_content![0]}}" alt="aditional1">
+</div>
+
+<div class="wrapper-container bg-primary-gradient">
+    <div class="project-info-container ">
+        <div class="main-container analysis">
+            <div class="scrollable-container">
+                <div class="scrollable-div">
+                    
+                    <div class="analysis-container">
+                        <div class="title-container">
+                            <span class="section fira-light color-medium3">
+                                {{project?.analysis?.name}}
+                            </span>
+                            <span class="title fira-medium color-white1">
+                                {{project?.analysis?.title}}
+                            </span>
+                        </div>
+                        <div class="content">
+                        
+                            <span class="primary-text libre-semiBold color-white2">
+                                {{project?.analysis?.primary_text}}
+                            </span>
+                            <span class="secondary-text nunito-regular color-white2">
+                                {{project?.analysis?.secondary_text}}
+                            </span>
+                            
+                            <div class="list">
+                                <span class="title libre-semiBold color-white2">
+                                    {{project?.analysis?.list?.title}}
+                                </span>
+                                <ng-container *ngFor="let item of project?.analysis?.list!.list_items">
+                                    <span class="list-item nunito-light color-white2">
+                                        {{item}}
+                                    </span>
+                                </ng-container>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="next-container">
+                    <div class="actions">
+                        <div class="back-container" (click)="goBack()">
+                            <img src="../../../assets/icons/back.svg" alt="back">
+                            <span class="text fira-medium color-medium1">
+                                Back
+                            </span>
+                        </div>
+                        <span class="next libre-semiBold color-white2" (click)="goNext()">
+                            Next project
+                        </span>
+                    </div>
+                    <div class="next-project">
+                        <div class="next-card ">
+                            <div class="text-container">
+                                <span class="title fira-bold color-white1">
+                                    {{nextProject?.title}}
+                                </span>
+                                <div class="sub-title">
+                                    <span class="location nunito-regular color-white2">
+                                        {{nextProject?.location}}
+                                    </span>
+                                    <span class="motto nunito-light color-white2">
+                                        {{nextProject?.motto}}
+                                    </span>
+                                </div>
+                                <span class="intro nunito-regular color-white2">
+                                    {{nextProject?.intro}}
+                                </span>
+                            </div>
+                            <div class="img-container">
+                                <img src="{{nextProject?.mainImage}}" alt="main_image">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="navigator">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<app-footer
+    [simple]="false"
+></app-footer>

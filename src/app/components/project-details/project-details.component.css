@@ -181,12 +181,16 @@
         padding-left: 47px;
         padding-right: 47px;
         gap: 36px;
+        &.analysis{
+            margin-top: 0px !important;
+            .scrollable-container{
+                border-top: 1px solid #ADB5BD;
+            }
+        }
         .scrollable-container{
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
-            min-height: 800px;
-            max-height: 800px;
             overflow: hidden;
             .scrollable-div{
                 width: 100%;
@@ -344,6 +348,64 @@
                 padding-top: 80px !important;
                 border-bottom: 1px solid #ADB5BD;
             }
+            .analysis-container{
+                display: flex;
+                justify-content: center;
+                gap: 18px;
+                padding-bottom: 40px;
+                padding-top: 40px;
+                .title-container{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    min-width: 328px;
+                    max-width: 328px;
+                    .section{
+                        font-size: 12px;
+                    }
+                    .title{
+                        font-size: 28px;
+                        line-height: 30px;
+                    }
+                }
+                .content{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    min-width: 827px;
+                    max-width: 827px;
+                    .primary-image{
+                        margin-bottom: 24px;
+                    }
+                    .secondary-image{
+                        margin-bottom: 24px;
+                    }
+                    .primary-text{
+                        font-size: 16px;
+                        line-height: 19px;
+                        margin-bottom: 16px;
+                    }
+                    .secondary-text{
+                        font-size: 12px;
+                        line-height: 14px;
+                        margin-bottom: 24px;
+                    }
+                    .list{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-start;
+                        gap: 8px;
+                        .title{
+                            font-size: 16px;
+                            line-height: 19px;
+                        }
+                        .list-item{
+                            font-size: 12px;
+                            line-height: 14px;
+                        }
+                    }
+                }
+            }
         }
         .navigator{
             display: flex;
@@ -424,6 +486,42 @@
             }
         }
     }
+
+    .cbpi-animated-container{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 57px;
+        margin-top: 34px;
+        .primary-gif-container{
+            display: flex;
+            justify-content: flex-start;
+            min-width: 450px;
+            max-width: 450px;
+            max-height: 420px;
+            img{
+                position: relative;
+                top: -50%;
+                left: -100%;
+                width: 250%;
+                height: 191%;
+            }
+        }
+        .second-container{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            gap: 30px;
+            img{
+                margin-top: 36px;
+                width: 95px;
+                height: 92px;
+            }
+            .text{
+                font-size: 44px;
+                line-height: 47px;
+            }
+        }
+    }
 }
 
 .aditional-content{
@@ -432,5 +530,103 @@
     overflow: hidden;
     img{
         width: 100%;
+    }
+}
+
+.next-container{
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-self: flex-end;
+    max-width: 679px;
+    min-width: 679px;
+    .actions{
+        display: flex;
+        justify-content: space-between;
+        min-height: 56px;
+        align-items: center;
+        .back-container{
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            cursor: pointer;
+            img{
+                width: 24px;
+                height: 24px;
+                align-self: center;
+            }
+            .text{
+                font-size: 14px;
+                line-height: 18px;
+            }
+        }
+        .next{
+            font-size: 16px;
+            line-height: 20px;
+            cursor: pointer;
+        }
+    }
+}
+.next-project{
+    
+    max-width: 679px;
+    min-width: 679px;
+    min-height: 290px;
+    max-height: 290px;
+    margin-bottom: 124px;
+    overflow: hidden;
+    background: transparent;
+    cursor: pointer;
+    .next-card{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        background: #E9ECEF14;
+        border-radius: 12px;
+        overflow: hidden;
+        transition: .4s;
+        .text-container{
+            padding-top: 22px;
+            padding-left: 28px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            max-width: 291px;
+            min-height: 268px;
+            max-height: 268px;
+            gap: 12px;
+            .title{
+                min-height: 21px;
+                font-size: 18px;
+                line-height: 20px;
+                max-width: 250px;
+            }
+            .sub-title{
+                min-height: 23px;
+                .location{
+                    font-size: 8px;
+                    line-height: 11px;
+                }
+                .motto{
+                    font-size: 8px;
+                    line-height: 11px;
+                }
+            }
+            .intro{
+                font-size: 8px;
+                line-height: 11px;
+                max-width: 225px;
+            }
+        }
+        .img-container{
+            max-height: 290px;
+            max-width: 360px;
+            display: flex;
+            justify-content: center;
+        }
+    }
+    .next-card:hover{
+        background: #E9ECEF28;
     }
 }

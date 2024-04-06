@@ -1,4 +1,5 @@
 export interface IProject {
+    route: string
     name: string
     cardImage: string
     mainImage: string
@@ -28,6 +29,16 @@ export interface IProject {
     detailed_steps: IDetailedStep[]
     animated_gifs: string[] | null
     aditional_content: string[]
+    analysis: {
+        name: string
+        title: string
+        primary_text: string
+        secondary_text: string
+        list: {
+            title: string
+            list_items: string[] 
+        }
+    }
 }
 
 export interface IDetailedStep {
@@ -50,6 +61,7 @@ export class ProjectsList extends Array<IProject> {
     constructor(){
         super();
         this[0] = {
+            route: '/carbon-journey',
             name: 'CarbonJourney',
             cardImage: '../../assets/img/carbon_journey/carbon_card.svg',
             mainImage: '../../assets/img/carbon_journey/carbon_large.svg',
@@ -212,10 +224,25 @@ export class ProjectsList extends Array<IProject> {
             ],
             aditional_content: [
                 '../../assets/img/carbon_journey/aditional_1.svg',
-            ]
+            ],
+            analysis: {
+                name: 'Analysis',
+                title: 'I would improve',
+                primary_text: 'CarbonJourney was an excellent project that I develop with an excellent team. Nevertheless, all projects could be made differently, and this analysis would help me to understand what I would do in my next project if the opportunity is presented for me to improve as well.',
+                secondary_text: 'At the beginning of CarbonJourney project there was certain discrepancies between Lead Design and Front-end development regarding design abilities and implementation capacity. Therefore, was necessary a development onboarding through several logistics and architecture presentations for ideas communication that somehow delayed the project results and limited the opportunities of product improvements and iterations.',
+                list: {
+                    title: 'Learnings:',
+                    list_items: [
+                        '-Having an profound understanding of the product will communicate the design needs and define the implementation processes',
+                        '-Communicating clearly the used methodology for software construction can diminish significantly the time margin of learning',
+                        '-Teams that can improve between members have the advantage of a profound understanding of the product, but lacks efficiency in terms of wasted time on communication strategies for professional levelling that would result on the desired outcome'
+                    ]
+                }
+            }
         } 
 
         this[1] = {
+            route: '/cbpi-etl',
             name: 'CB- ETL Tool',
             cardImage: '../../assets/img/cbpi/cbpi_card.svg',
             mainImage: '../../assets/img/cbpi/cbpi_large.svg',
@@ -355,15 +382,30 @@ export class ProjectsList extends Array<IProject> {
                 },
             ],
             animated_gifs: [
-                '../../assets/img/carbon_journey/carbon_1_gif.gif',
-                '../../assets/img/carbon_journey/carbon_2_gif.gif',
+                '../../assets/img/cbpi/cbpi_1_gif.gif',
+                '../../assets/img/cbpi/logo_cloud_bridge.svg',
             ],
             aditional_content: [
-                '../../assets/img/carbon_journey/aditional_1.svg',
-            ]
+                '../../assets/img/cbpi/aditional_1.svg',
+            ],
+            analysis: {
+                name: 'Analysis',
+                title: 'I would improve',
+                primary_text: 'CB ETL tool was a nurtured project that I redesigned with a pro team. Every project, although, can be improved. The redesign project of CB was really challenging, between the incongruence of the SaaS projection of the product and the already built one-organization platform, there was several functionalities that could not be added in the redesign project. In this way, a better establishment of the product would ease the product development.',
+                secondary_text: 'A redesign project always needs to reach a point were you have to built your product without somehow alter to much the previous design and at the same time rebuilt it from almost zero in this case. There were several UX design weaknesses, and UI design discrepancies. It was challenging to find a way were the old users would be satisfied altering the tool that they were already using meanwhile giving new users a better platform experience without any further perceptions prejudges. ',
+                list: {
+                    title: 'Learnings:',
+                    list_items: [
+                        '-An established product plan will ease in the future the needs and functionalities that our product would have, and will make the objective of it constant through time.',
+                        '-Communicating clearly the used methodology for software construction can diminish significantly the time margin of learning.',
+                        '-A redesign product is somehow difficult between old user expectations and new users engaging. A profound understanding of the old version product will reduce the design thinking process.'
+                    ]
+                }
+            }
         }
 
         this[2] = {
+            route: '/swappinc',
             name: 'Swappinc',
             cardImage: '../../assets/img/swappinc/swappinc_card.svg',
             mainImage: '../../assets/img/swappinc/swappinc_large.svg',
@@ -483,14 +525,28 @@ export class ProjectsList extends Array<IProject> {
             ],
             animated_gifs: [
                 '../../assets/img/carbon_journey/carbon_1_gif.gif',
-                '../../assets/img/carbon_journey/carbon_2_gif.gif',
             ],
             aditional_content: [
-                '../../assets/img/carbon_journey/aditional_1.svg',
-            ]
+                '../../assets/img/swappinc/aditional_1.svg',
+            ],
+            analysis: {
+                name: 'Analysis',
+                title: 'I would improve',
+                primary_text: 'Swappinc was an extraordinary experience regarding design and client collaboration. There was always a gentle touch that let us advance progressively through a satisfying outcome, the result was excellent and fulfilling not only for the client, but for the designer. Nevertheless, an improvement can always be made.',
+                secondary_text: 'Any project needs for a detailed and structured workpath to be accomplished in order to achieve the goal in determined time lapses and so on. In this case, the project organization was affected by team incongruences and lack of time by some of the associates. Nevertheless, with high valuable work strategies the project was finished within the stipulated timeframe, but it was needed an extra-design work that, we will never know, could affect the final product.',
+                list: {
+                    title: 'Learnings:',
+                    list_items: [
+                        '-An established product plan will ease in the future the needs and functionalities that our product would have, and will make the objective of it constant through time.',
+                        '-A constant communication between designer and associates will ease the project goals.',
+                        '-Structured workpaths would always allow us to complete our projects systematically with profound organization and work awareness.'
+                    ]
+                }
+            }
         }
 
         this[3] = {
+            route: '/karko',
             name: 'Karko Corp',
             cardImage: '../../assets/img/karko/karko_card.svg',
             mainImage: '../../assets/img/karko/karko_large.svg',
@@ -625,8 +681,22 @@ export class ProjectsList extends Array<IProject> {
                 '../../assets/img/carbon_journey/carbon_2_gif.gif',
             ],
             aditional_content: [
-                '../../assets/img/carbon_journey/aditional_1.svg',
-            ]
+                '../../assets/img/karko/aditional_1.svg',
+            ],
+            analysis: {
+                name: 'Analysis',
+                title: 'I would improve',
+                primary_text: 'Karko Corp was one of my first experiences of creating digital product designs from scratch, It involved a lot of acquired knowledge to apply in future projects regarding Design Patterns and best approaches for user experience success. It was also a personal project, created from mind and composition liberty, without the constraints of programming limitations or client schedules. ',
+                secondary_text: 'As one of my first projects, it implied lack for several design principles that in the present I have always on my mind, this was a project of learning an growth in the UX/UI design path, for what I’m eternally grateful, nevertheless. the lack of a defined structure and component’s building would improve this project to even higher design standards.',
+                list: {
+                    title: 'Learnings:',
+                    list_items: [
+                        '-Identify needed design patterns for a product will ease the understanding of what we need to build in our design',
+                        '-Structured work paths will make the design process faster and more efficient',
+                        '-Awareness of our product reality will enhance our product outcome significantly through a profound understanding of our core digital concept'
+                    ]
+                }
+            }
         }
     }
 }
