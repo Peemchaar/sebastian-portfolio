@@ -19,8 +19,7 @@ export class ProjectCardBigComponent {
   ngOnInit(): void {
   }
 
-  viewDetails(){
-    this.projectService.updatecurrentProject(this.project!)
-    this.router.navigate(['/projec-details']);
+  viewDetails(route: string){
+    this.router.navigate([route]);
   }
 }

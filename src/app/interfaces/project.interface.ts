@@ -1,4 +1,5 @@
 export interface IProject {
+    route: string
     name: string
     cardImage: string
     mainImage: string
@@ -60,6 +61,7 @@ export class ProjectsList extends Array<IProject> {
     constructor(){
         super();
         this[0] = {
+            route: '/carbon-journey',
             name: 'CarbonJourney',
             cardImage: '../../assets/img/carbon_journey/carbon_card.svg',
             mainImage: '../../assets/img/carbon_journey/carbon_large.svg',
@@ -240,6 +242,7 @@ export class ProjectsList extends Array<IProject> {
         } 
 
         this[1] = {
+            route: '/cbpi-etl',
             name: 'CB- ETL Tool',
             cardImage: '../../assets/img/cbpi/cbpi_card.svg',
             mainImage: '../../assets/img/cbpi/cbpi_large.svg',
@@ -402,6 +405,7 @@ export class ProjectsList extends Array<IProject> {
         }
 
         this[2] = {
+            route: '/swappinc',
             name: 'Swappinc',
             cardImage: '../../assets/img/swappinc/swappinc_card.svg',
             mainImage: '../../assets/img/swappinc/swappinc_large.svg',
@@ -542,6 +546,7 @@ export class ProjectsList extends Array<IProject> {
         }
 
         this[3] = {
+            route: '/karko',
             name: 'Karko Corp',
             cardImage: '../../assets/img/karko/karko_card.svg',
             mainImage: '../../assets/img/karko/karko_large.svg',

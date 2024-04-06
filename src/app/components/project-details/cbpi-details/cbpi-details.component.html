@@ -153,20 +153,6 @@
                 </ng-container>
             </div>
         </div>
-        <div class="carbon-animated-container" *ngIf="project?.name == 'CarbonJourney'">
-            <div class="primary-gif-container">
-                <img src="{{project?.animated_gifs![0]}}" alt="gif1">
-            </div>
-            
-            <div class="second-container">
-                <span class="text fira-medium color-white1">
-                    Out of the box solutions, <br> The best simple results
-                </span>
-                <div class="secondary-gif-container">
-                    <img src="{{project?.animated_gifs![1]}}" alt="gif2">
-                </div>
-            </div>
-        </div>
         <div class="cbpi-animated-container" *ngIf="project?.name == 'CB- ETL Tool'">
             <div class="primary-gif-container">
                 <img src="{{project?.animated_gifs![0]}}" alt="gif1">
@@ -270,5 +256,3 @@
 <app-footer
     [simple]="false"
 ></app-footer>
-
-

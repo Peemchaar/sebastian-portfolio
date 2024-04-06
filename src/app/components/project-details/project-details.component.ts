@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { IProject, ProjectsList } from 'src/app/interfaces/project.interface';
 import { ProjectService } from 'src/app/services/project-service';
@@ -9,6 +9,8 @@ import { ProjectService } from 'src/app/services/project-service';
   styleUrls: ['./project-details.component.css']
 })
 export class ProjectDetailsComponent {
+ // @ViewChild("myElem") MyProp: ElementRef | undefined;
+  
   project: IProject | null = null;
   projectsList: Array<IProject> = new ProjectsList;
   nextProject: IProject | undefined
@@ -19,6 +21,10 @@ export class ProjectDetailsComponent {
   ) { }
 
   ngOnInit(): void {
+    //this.MyProp!.nativeElement.scrollIntoView({ behavior: "smooth", block: "start" });
+
+
+
     this.projectService.currentProject.subscribe(project => {
       this.project = project;
       if(this.project == null){
@@ -47,5 +53,9 @@ export class ProjectDetailsComponent {
         this.nextProject = this.projectsList[this.index!]
       }
     }
+  }
+
+  goBack(){
+    this.router.navigate(['/projects']);
   }
 }
