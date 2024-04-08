@@ -28,7 +28,8 @@ export class ContactService {
         })
         .then(
             () => {
-            return 'SUCCESS!';
+                alert('Your message was sent successfully!')
+                return 'SUCCESS!';
             },
             (error) => {
             return (error as EmailJSResponseStatus).text;

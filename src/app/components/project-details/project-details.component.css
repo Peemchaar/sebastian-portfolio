@@ -407,17 +407,16 @@
                 }
             }
         }
+
         .navigator{
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
             min-width: 120px;
             max-width: 120px;
-        }
-        .navigator{
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
+            max-height: 500px;
+            position: sticky;
+            top: 0;
             .nav-item{
                 font-size: 16px;
                 line-height: 40px;

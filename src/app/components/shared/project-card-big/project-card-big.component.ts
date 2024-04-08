@@ -20,6 +20,7 @@ export class ProjectCardBigComponent {
   }
 
   viewDetails(route: string){
-    this.router.navigate([route]);
+    this.projectService.updatecurrentProject(this.project!)
+    this.router.navigate(['/project-details']);
   }
 }

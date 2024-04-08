@@ -12,7 +12,7 @@
             Let’s explore how design can innovate with non-expected creative solutions.
         </p>
         <div class="buttom-container">
-            <div class="btn-primary-white">
+            <div class="btn-primary-white" (click)="scrollToForm()">
                 <span class="fira-medium color-dark3">
                     Contact me
                 </span>
@@ -21,7 +21,7 @@
     </div>
 </div>
 
-<div class="contact-container bg-white1">
+<div class="contact-container bg-white1" #formDiv>
     <div class="form-container bg-dark4">
         <span class="title fira-bold color-white1 ph4">
             Please fill this form to get in touch

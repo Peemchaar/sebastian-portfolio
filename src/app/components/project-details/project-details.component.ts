@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, ViewChildren, QueryList, HostListener, ViewChild  } from '@angular/core';
 import { Router } from '@angular/router';
 import { IProject, ProjectsList } from 'src/app/interfaces/project.interface';
 import { ProjectService } from 'src/app/services/project-service';
@@ -8,9 +8,11 @@ import { ProjectService } from 'src/app/services/project-service';
   templateUrl: './project-details.component.html',
   styleUrls: ['./project-details.component.css']
 })
+
 export class ProjectDetailsComponent {
- // @ViewChild("myElem") MyProp: ElementRef | undefined;
-  
+  @ViewChildren('project_step') detailedStepQueryList!: QueryList<ElementRef>;
+
+  navSticky: boolean = false;
   project: IProject | null = null;
   projectsList: Array<IProject> = new ProjectsList;
   nextProject: IProject | undefined
@@ -21,10 +23,6 @@ export class ProjectDetailsComponent {
   ) { }
 
   ngOnInit(): void {
-    //this.MyProp!.nativeElement.scrollIntoView({ behavior: "smooth", block: "start" });
-
-
-
     this.projectService.currentProject.subscribe(project => {
       this.project = project;
       if(this.project == null){
@@ -39,6 +37,10 @@ export class ProjectDetailsComponent {
     }
   }
 
+  ngAfterViewInit() {
+    this.detailedStepQueryList.forEach(div => console.log(div));
+  }
+
   goNext(){
     this.projectService.updatecurrentProject(this.nextProject!);
     this.project = this.nextProject!;
@@ -50,12 +52,28 @@ export class ProjectDetailsComponent {
       if(this.index == this.projectsList.length - 1){
         this.nextProject = this.projectsList[0]
       }else{
-        this.nextProject = this.projectsList[this.index!]
+        this.nextProject = this.projectsList[this.index!+ 1]
       }
     }
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: 'smooth',
+    });
   }
 
   goBack(){
     this.router.navigate(['/projects']);
+  }
+
+  navigateTo(name: string){
+
+    this.detailedStepQueryList
+    this.detailedStepQueryList.forEach(div => {
+      if(div.nativeElement.id == name){
+        div.nativeElement.scrollIntoView({ behavior: "smooth", block: "start" });
+        return
+      }
+    });
   }
 }
