@@ -46,18 +46,25 @@ export class HomeComponent implements OnInit {
     
   }
 
-
   public navigate(target: string){
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: 'smooth',
+    });
     switch (target.toLocaleLowerCase()) {
       case 'my work':
         this.headerService.updateCurrentPage(target);
-        this.router.navigate(['/work']);
+        this.router.navigate(['/projects']);
         break;
       case 'about':
         this.headerService.updateCurrentPage(target);
         this.router.navigate(['/about']);
         break;
-    
+        case 'contact':
+          this.headerService.updateCurrentPage(target);
+          this.router.navigate(['/contact']);
+          break;
       default:
         break;
     }

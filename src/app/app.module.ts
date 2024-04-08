@@ -19,11 +19,6 @@ import {FormsModule , ReactiveFormsModule } from '@angular/forms';
 import { ProjectCardBigComponent } from './components/shared/project-card-big/project-card-big.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { ProjectDetailsComponent } from './components/project-details/project-details.component';
-import { CarbonDetailsComponent } from './components/project-details/carbon-details/carbon-details.component';
-import { CbpiDetailsComponent } from './components/project-details/cbpi-details/cbpi-details.component';
-import { SwappincDetailsComponent } from './components/project-details/swappinc-details/swappinc-details.component';
-import { KarkoDetailsComponent } from './components/project-details/karko-details/karko-details.component';
-
 
 
 @NgModule({
@@ -38,10 +33,6 @@ import { KarkoDetailsComponent } from './components/project-details/karko-detail
     ProjectCardBigComponent,
     ProjectsComponent,
     ProjectDetailsComponent,
-    CarbonDetailsComponent,
-    CbpiDetailsComponent,
-    SwappincDetailsComponent,
-    KarkoDetailsComponent
   ],
   imports: [
     BrowserModule,

@@ -84,10 +84,10 @@ export class ProjectsList extends Array<IProject> {
             design_process: {
                 steps: [
                     'Research',
-                    'Visual Identity',
+                    'Visual identity',
                     'Architecture',
                     'Wireframing',
-                    'Design System',
+                    'Design system',
                     'Results'
                 ],
                 role: {
@@ -266,7 +266,7 @@ export class ProjectsList extends Array<IProject> {
                     'Research',
                     'Architecture',
                     'Wireframing',
-                    'Design System',
+                    'Design system',
                     'Results'
                 ],
                 role: {
@@ -427,7 +427,7 @@ export class ProjectsList extends Array<IProject> {
                 steps: [
                     'Research',
                     'Logo Construction',
-                    'Visual Identity',
+                    'Visual identity',
                     'Product Manual',
                     'Results'
                 ],

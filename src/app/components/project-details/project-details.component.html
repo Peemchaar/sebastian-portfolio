@@ -66,8 +66,8 @@
             </div>
         </div>
     
-        <div class="main-container">
-            <div class="scrollable-container">
+        <div class="main-container" >
+            <div class="scrollable-container" #scrollable>
                 <div class="scrollable-div">
                     <div class="bento-container">
                         <div class="vertical">
@@ -108,7 +108,7 @@
                         </div>
                     </div>
                     <ng-container *ngFor="let detailedStep of project?.detailed_steps">
-                        <div class="detailed-step-container" [id]="detailedStep.name" [ngClass]="detailedStep!.name != 'Results'  ? 'divider': ''">
+                        <div #project_step class="detailed-step-container" [id]="detailedStep.name" [ngClass]="detailedStep!.name != 'Results'  ? 'divider': ''">
                             
                             <div class="title-container">
                                 <span class="section fira-light color-medium3">
@@ -142,12 +142,9 @@
                     </ng-container>
                 </div>
             </div>
-            <div class="navigator">
-                <span class="nav-item nunito color-medium3 nunito-semiBold">
-                    Overview
-                </span>
+            <div class="navigator" #navigator [ngClass]="navSticky  ? 'sticky': ''">
                 <ng-container *ngFor="let step of project?.design_process?.steps; let x = index">
-                    <span class="nav-item nunito color-medium3 nunito-semiBold">
+                    <span class="nav-item nunito color-medium3 nunito-semiBold" (click)="navigateTo(step)">
                         {{step}}
                     </span>
                 </ng-container>
@@ -235,7 +232,7 @@
                         </span>
                     </div>
                     <div class="next-project">
-                        <div class="next-card ">
+                        <div class="next-card " (click)="goNext()">
                             <div class="text-container">
                                 <span class="title fira-bold color-white1">
                                     {{nextProject?.title}}
@@ -258,9 +255,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="navigator">
-
             </div>
         </div>
     </div>

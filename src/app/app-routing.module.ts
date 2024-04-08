@@ -6,10 +6,6 @@ import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { ProjectDetailsComponent } from './components/project-details/project-details.component';
-import { CarbonDetailsComponent } from './components/project-details/carbon-details/carbon-details.component';
-import { CbpiDetailsComponent } from './components/project-details/cbpi-details/cbpi-details.component';
-import { SwappincDetailsComponent } from './components/project-details/swappinc-details/swappinc-details.component';
-import { KarkoDetailsComponent } from './components/project-details/karko-details/karko-details.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent},
@@ -17,10 +13,6 @@ export const routes: Routes = [
   { path: 'contact', component: ContactComponent},
   { path: 'projects', component: ProjectsComponent},
   { path: 'project-details', component: ProjectDetailsComponent},
-  { path: 'carbon-journey', component: CarbonDetailsComponent},
-  { path: 'cbpi-etl', component: CbpiDetailsComponent},
-  { path: 'swappinc', component: SwappincDetailsComponent},
-  { path: 'karko', component: KarkoDetailsComponent},
 ]
 
 

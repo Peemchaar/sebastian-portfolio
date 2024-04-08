@@ -22,6 +22,12 @@
             text-align: center;
             margin-top: 19px;
         }
+        .btn-primary-white{
+            margin-top: 24px;
+            height: 50px;
+            width: 123px;
+            align-self: center;
+        }
     }
     .copyright-container{
         display: flex;

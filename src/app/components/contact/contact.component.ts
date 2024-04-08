@@ -16,6 +16,8 @@ import { ContactService } from 'src/app/services/contact.service';
   styleUrls: ['./contact.component.css'],
 })
 export class ContactComponent implements OnInit {
+  @ViewChild("formDiv") formDiv!: ElementRef;
+
   customColor = new THREE.Color( 0x212529 );
   planet$ = this.ngtGLTFLoaderService.load('../../../assets/3d/world_earth_planet_GLTF/scene.gltf');
   hourGMT4: string = '';
@@ -43,6 +45,10 @@ export class ContactComponent implements OnInit {
   ngOnInit(): void {
     this.contactService.init();
     this.initForm();
+  }
+
+  scrollToForm(){
+    this.formDiv.nativeElement.scrollIntoView({ behavior: "smooth", block: "start" });
   }
 
   setInitial(controls: NgtSobaOrbitControls){
