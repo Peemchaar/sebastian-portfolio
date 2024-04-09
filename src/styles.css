@@ -49,6 +49,7 @@
 body{
     margin: 0;
     overflow-x: hidden;
+    background: linear-gradient(to right, rgba(33,37,41,1) 0%, rgba(73,80,87,1) 100%);
 }
 
 /* ------ FONT CLASSES ------*/

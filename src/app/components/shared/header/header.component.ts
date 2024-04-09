@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { ActivatedRoute, NavigationStart, Router } from '@angular/router';
 import { HeaderService } from 'src/app/services/header.service';
 
@@ -8,6 +8,7 @@ import { HeaderService } from 'src/app/services/header.service';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
+
   navData: InavItem[] = [
     {
       text: 'Home',
@@ -45,24 +46,44 @@ export class HeaderComponent implements OnInit {
   }
 
   public navigate(target: string){
+    
     switch (target.toLocaleLowerCase()) {
       case 'home':
         this.headerService.updateCurrentPage(target);
-        this.router.navigate(['']);
+        this.headerService.updateDisolveState(true);
+        setTimeout(() => 
+          {
+            this.router.navigate(['']);
+          },
+        500);
         break;
       case 'my work':
         this.headerService.updateCurrentPage(target);
-        this.router.navigate(['/projects']);
+        this.headerService.updateDisolveState(true);
+        setTimeout(() => 
+          {
+            this.router.navigate(['/projects']);
+          },
+        500);
         break;
       case 'about':
         this.headerService.updateCurrentPage(target);
-        this.router.navigate(['/about']);
+        this.headerService.updateDisolveState(true);
+        setTimeout(() => 
+          {
+            this.router.navigate(['/about']);
+          },
+        500);
         break;
       case 'contact':
         this.headerService.updateCurrentPage(target);
-        this.router.navigate(['/contact']);
+        this.headerService.updateDisolveState(true);
+        setTimeout(() => 
+          {
+            this.router.navigate(['/contact']);
+          },
+        500);
         break;
-    
       default:
         break;
     }

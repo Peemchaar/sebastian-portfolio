@@ -10,12 +10,10 @@ import { HeaderService } from 'src/app/services/header.service';
 })
 export class HomeComponent implements OnInit {
   projectsList: Array<IProject> = new ProjectsList;
-
   mouseDown = false;
-
   startX: any;
-
   scrollLeft: any;
+  disolveDiv = document.getElementById('disolve-container');
 
   @ViewChild('carrousel') slider: ElementRef | undefined;
 
@@ -43,7 +41,22 @@ export class HomeComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: 'smooth',
+    });
+    this.headerService.startDisolve.subscribe(value => {
+      if(value == true){
+        this.disolveDiv?.classList.add('disolve');
+      }else{
+        this.disolveDiv?.classList.remove('disolve');
+      }
+    });
+  }
+
+  ngAfterViewInit() {
+    this.headerService.updateDisolveState(false)
   }
 
   public navigate(target: string){
@@ -54,16 +67,32 @@ export class HomeComponent implements OnInit {
     });
     switch (target.toLocaleLowerCase()) {
       case 'my work':
-        this.headerService.updateCurrentPage(target);
-        this.router.navigate(['/projects']);
+        this.headerService.updateCurrentPage('My work');
+        this.headerService.updateDisolveState(true)
+        setTimeout(() => 
+          {
+            this.router.navigate(['/projects']);
+          },
+        500);
         break;
       case 'about':
         this.headerService.updateCurrentPage(target);
-        this.router.navigate(['/about']);
+        this.headerService.updateDisolveState(true)
+        setTimeout(() => 
+          {
+            this.router.navigate(['/about']);
+          },
+        500);
+
         break;
         case 'contact':
           this.headerService.updateCurrentPage(target);
-          this.router.navigate(['/contact']);
+          this.headerService.updateDisolveState(true)
+          setTimeout(() => 
+            {
+              this.router.navigate(['/contact']);
+            },
+          500);
           break;
       default:
         break;
