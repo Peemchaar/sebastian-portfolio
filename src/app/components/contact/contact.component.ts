@@ -25,6 +25,7 @@ export class ContactComponent implements OnInit {
   hourGMT4: string = '';
   phones: string = '+1 (407)360-3170'
   socialMedia: Array<ISocialMedia> = new SocialMediaList;
+  showError: boolean = false;
 
   form: FormGroup = new FormGroup({
     name: new FormControl('', [Validators.required]),
@@ -90,6 +91,13 @@ export class ContactComponent implements OnInit {
         (response) => {
           console.log(response)
         })
+    }else if(!this.form.valid){
+      this.showError = true;
+      setTimeout(() => 
+        {
+          this.showError = false;
+        },
+      5000);
     }
 
   }
