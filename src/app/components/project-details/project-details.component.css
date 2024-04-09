@@ -521,6 +521,14 @@
             }
         }
     }
+    .swappinc-animated-container{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 57px;
+        margin-top: 34px;
+        min-height: 910px;
+        max-height: 910px;
+    }
 }
 
 .aditional-content{

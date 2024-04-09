@@ -8,6 +8,7 @@ import * as moment from 'moment';
 import { ISocialMedia, SocialMediaList } from 'src/app/interfaces/social-media.interface';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ContactService } from 'src/app/services/contact.service';
+import { HeaderService } from 'src/app/services/header.service';
 
 
 @Component({
@@ -18,6 +19,7 @@ import { ContactService } from 'src/app/services/contact.service';
 export class ContactComponent implements OnInit {
   @ViewChild("formDiv") formDiv!: ElementRef;
 
+  disolveDiv = document.getElementById('disolve-container');
   customColor = new THREE.Color( 0x212529 );
   planet$ = this.ngtGLTFLoaderService.load('../../../assets/3d/world_earth_planet_GLTF/scene.gltf');
   hourGMT4: string = '';
@@ -34,7 +36,8 @@ export class ContactComponent implements OnInit {
   
   constructor(
     private ngtGLTFLoaderService: NgtGLTFLoaderService,
-    private contactService: ContactService
+    private contactService: ContactService,
+    private headerService: HeaderService
   ) {
     this.hourGMT4 = moment().utcOffset('-04:00').format('HH:mm:ss');
     setInterval(() => {
@@ -45,6 +48,17 @@ export class ContactComponent implements OnInit {
   ngOnInit(): void {
     this.contactService.init();
     this.initForm();
+    this.headerService.startDisolve.subscribe(value => {
+      if(value == true){
+        this.disolveDiv?.classList.add('disolve');
+      }else{
+        this.disolveDiv?.classList.remove('disolve');
+      }
+    });
+  }
+
+  ngAfterViewInit() {
+    this.headerService.updateDisolveState(false)
   }
 
   scrollToForm(){

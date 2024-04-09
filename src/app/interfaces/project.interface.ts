@@ -524,7 +524,7 @@ export class ProjectsList extends Array<IProject> {
                 },
             ],
             animated_gifs: [
-                '../../assets/img/carbon_journey/carbon_1_gif.gif',
+                '../../assets/img/swappinc/swappinc_1.svg',
             ],
             aditional_content: [
                 '../../assets/img/swappinc/aditional_1.svg',

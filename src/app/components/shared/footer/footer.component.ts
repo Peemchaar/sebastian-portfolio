@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { HeaderService } from 'src/app/services/header.service';
 
 @Component({
   selector: 'app-footer',
@@ -8,8 +9,11 @@ import { Router } from '@angular/router';
 })
 export class FooterComponent implements OnInit {
   @Input() simple: boolean | undefined;
+  disolveDiv = document.getElementById('disolve-container');
+
   constructor(
     private router: Router,
+    private headerService: HeaderService
   ) { }
 
   ngOnInit(): void {
@@ -22,6 +26,12 @@ export class FooterComponent implements OnInit {
       left: 0,
       behavior: 'smooth',
     });
-    this.router.navigate(['/contact']);
+    this.headerService.updateDisolveState(true)
+    this.headerService.updateCurrentPage('contact')
+    setTimeout(() => 
+      {
+        this.router.navigate(['/contact']);
+      },
+    500);
   }
 }

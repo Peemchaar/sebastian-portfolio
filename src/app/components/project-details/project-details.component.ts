@@ -1,6 +1,7 @@
 import { Component, ElementRef, ViewChildren, QueryList, HostListener, ViewChild  } from '@angular/core';
 import { Router } from '@angular/router';
 import { IProject, ProjectsList } from 'src/app/interfaces/project.interface';
+import { HeaderService } from 'src/app/services/header.service';
 import { ProjectService } from 'src/app/services/project-service';
 
 @Component({
@@ -17,16 +18,36 @@ export class ProjectDetailsComponent {
   projectsList: Array<IProject> = new ProjectsList;
   nextProject: IProject | undefined
   index: number = 0
+  disolveDiv = document.getElementById('disolve-container');
+
   constructor(
     private projectService: ProjectService,
+    private headerService: HeaderService,
     private router: Router,
   ) { }
 
   ngOnInit(): void {
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: 'smooth',
+    });
+    this.headerService.startDisolve.subscribe(value => {
+      if(value == true){
+        this.disolveDiv?.classList.add('disolve');
+      }else{
+        this.disolveDiv?.classList.remove('disolve');
+      }
+    });
     this.projectService.currentProject.subscribe(project => {
       this.project = project;
       if(this.project == null){
-        this.router.navigate(['/projects']);
+        this.headerService.updateDisolveState(true)
+        setTimeout(() => 
+          {
+            this.router.navigate(['/projects']);
+          },
+        500);
       }
     });
     this.index = this.projectsList.findIndex(p => p.name === this.project!.name)
@@ -38,7 +59,7 @@ export class ProjectDetailsComponent {
   }
 
   ngAfterViewInit() {
-    this.detailedStepQueryList.forEach(div => console.log(div));
+    this.headerService.updateDisolveState(false)
   }
 
   goNext(){
@@ -63,7 +84,12 @@ export class ProjectDetailsComponent {
   }
 
   goBack(){
-    this.router.navigate(['/projects']);
+    this.headerService.updateDisolveState(true)
+    setTimeout(() => 
+      {
+        this.router.navigate(['/projects']);
+      },
+    500);
   }
 
   navigateTo(name: string){
