@@ -25,6 +25,12 @@ export class ProjectCardBigComponent {
   viewDetails(route: string){
     this.headerService.updateCurrentPage('');
     this.projectService.updatecurrentProject(this.project!)
-    this.router.navigate(['/project-details']);
+    this.headerService.updateDisolveState(true)
+    setTimeout(() => 
+      {
+        this.router.navigate(['/project-details']);
+      },
+    500);
+    
   }
 }

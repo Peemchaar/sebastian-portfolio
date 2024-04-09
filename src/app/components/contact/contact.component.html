@@ -69,7 +69,7 @@
         </form>
         <div class="validator-container ph4">
             <div class="wrapper">
-                <span class="validator nunito-regular" *ngIf="!form.valid && form.dirty">
+                <span class="validator nunito-regular" *ngIf="showError">
                     All the fields are required
                 </span>
                 <div class="btn-primary-dark" (click)="sendEmail()">

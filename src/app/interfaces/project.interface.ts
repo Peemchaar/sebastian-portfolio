@@ -185,8 +185,8 @@ export class ProjectsList extends Array<IProject> {
                     }
                 },
                 {
-                    name: 'Results',
-                    title: 'Design system',
+                    name: 'Design system',
+                    title: 'Design system Results',
                     primary_image:  '../../assets/img/carbon_journey/step5_primary.svg',
                     secondary_image: null,
                     primary_text: 'With Atomic Design methodology we built a collection of repeatable components and a set of standardized guidelines for the use of these. As a big box of UI and UX Lego pieces, through CarbonJourney Design system we will be able to discover new possibilities to implement in our digital product successfully. All this aligned with our brand visual identity criteria and UX Wireframes defined strategy.  ',
@@ -343,8 +343,8 @@ export class ProjectsList extends Array<IProject> {
                     }
                 },
                 {
-                    name: 'Results',
-                    title: 'Design system',
+                    name: 'Design system',
+                    title: 'Design system Results',
                     primary_image:  '../../assets/img/cbpi/step4_primary.svg',
                     secondary_image: null,
                     primary_text: 'With Atomic Design methodology we built a collection of repeatable components and a set of standardized guidelines for the use of these. With CB Design system we want to enhance the organic scaling of this product, once built as one-organization tool aiming to be a general SaaS in the market. All this aligned with a new brand visual identity and UX Wireframes defined strategy.',
@@ -428,7 +428,6 @@ export class ProjectsList extends Array<IProject> {
                     'Research',
                     'Logo Construction',
                     'Visual identity',
-                    'Product Manual',
                     'Results'
                 ],
                 role: {
@@ -569,8 +568,8 @@ export class ProjectsList extends Array<IProject> {
                     'Research',
                     'Architecture',
                     'Wireframing',
-                    'Design System',
-                    'Final Art'
+                    'Design system',
+                    'Results'
                 ],
                 role: {
                     name: 'UX/UI Designer',
@@ -643,8 +642,8 @@ export class ProjectsList extends Array<IProject> {
                     }
                 },
                 {
-                    name: 'Results',
-                    title: 'Design system',
+                    name: 'Design system',
+                    title: 'Design system Results',
                     primary_image:  '../../assets/img/karko/step4_primary.svg',
                     secondary_image: null,
                     primary_text: 'Karko Corp component’s building was thought as a iconic identifier of the branch in every aspect. These components were built by specific Design System rules such as typography and colour hierarchy. With from scratch icons implemented in our design as fast concept communication through minimum denotations. ',
