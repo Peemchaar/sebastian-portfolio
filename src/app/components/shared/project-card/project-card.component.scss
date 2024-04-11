@@ -38,3 +38,21 @@
     }
 }
 
+
+@media only screen and (max-width: 768px)  {
+    .card{
+        min-width: 258px;
+        max-width: 258px;
+        min-height: 372px;
+        max-height: 372px;
+        justify-content: flex-start;
+        gap: 40px;
+        .img-container{
+            height: 258px;
+            img{
+                width: 258px;
+            }
+        }
+    }
+}
+

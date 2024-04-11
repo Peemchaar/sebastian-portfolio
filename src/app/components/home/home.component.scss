@@ -201,3 +201,92 @@
         border-bottom: 1px solid #CED4DA;
     }
 }
+
+
+@media only screen and (max-width: 768px)  {
+    .hero-container{
+        flex-direction: column-reverse;
+        padding-left: 20px;
+        padding-right: 20px;
+        .overview-container{
+            align-self: center;
+        }
+        .presentation-container{
+            max-width: 100%;
+            min-width: 280px;
+            h2{
+                max-width: 40%;
+                font-size: 48px;
+                line-height: 48px;
+            }
+            p{
+                font-size: 16px;
+                line-height: 22px;
+            }
+        }
+    }
+    .displacer-container{
+        display: none;
+        visibility: hidden;
+    }
+    .statement-container{
+        flex-direction: column;
+        gap: 17px;
+        padding-left: 20px;
+        padding-right: 20px;
+        min-height: 420px;
+        max-height: 420px;
+        .text-container{
+            gap: 24px;
+            max-width: none !important;
+        }
+        .buttom-container{
+            align-self: flex-start;
+            .rounded-buttom{
+                width: 109px;
+                height: 50px;
+                border-radius: 12px;
+            }
+        }
+    }
+    .works-container{
+        padding-left: 20px;
+        padding-right: 20px;
+        min-height: 1068px;
+        max-height: 1068px;
+        .title{
+            font-size: 44px;
+            line-height: 56px;
+            text-align: left;
+        }
+        .projects-container{
+            margin-top: 46px;
+        }
+        .sub-container{
+            align-self: flex-start;
+            .title{
+                align-self: flex-start;
+                font-size: 36px;
+                line-height: 56px;
+            }
+            .text{
+                text-align: left;
+            }
+            .buttom{
+                align-self: flex-start;
+                margin-top: 0px;
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width: 390px)  {
+    .hero-container{
+        .overview-container{
+            width: 308px;
+            height: 310px;
+            background-size: contain;
+        }
+    }
+}
