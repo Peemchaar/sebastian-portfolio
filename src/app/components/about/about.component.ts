@@ -5,7 +5,7 @@ import { HeaderService } from 'src/app/services/header.service';
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
-  styleUrls: ['./about.component.css']
+  styleUrls: ['./about.component.scss']
 })
 export class AboutComponent implements OnInit {
   disolveDiv = document.getElementById('disolve-container');
