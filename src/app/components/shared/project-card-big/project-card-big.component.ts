@@ -7,7 +7,7 @@ import { ProjectService } from 'src/app/services/project-service';
 @Component({
   selector: 'app-project-card-big',
   templateUrl: './project-card-big.component.html',
-  styleUrls: ['./project-card-big.component.css']
+  styleUrls: ['./project-card-big.component.scss']
 })
 export class ProjectCardBigComponent {
   @Input() project: IProject | undefined;

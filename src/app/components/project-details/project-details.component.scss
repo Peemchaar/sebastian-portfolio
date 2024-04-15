@@ -637,3 +637,111 @@
         background: #E9ECEF28;
     }
 }
+
+
+@media only screen and (max-width: 768px)  {
+    .wrapper-container{
+        .project-info-container{
+            .design-process{
+                .steps-container{
+                    overflow-x: scroll;
+                    width: 674px;
+                }
+            }
+            .main-container{
+                flex-direction: column;
+                justify-content: flex-start;
+                padding-top: 0px;
+                margin-top: 36px;
+                .scrollable-container{
+                    .scrollable-div{
+                        overflow: unset !important;
+                        .bento-container{
+                            flex-direction: column;
+                            gap: 8px;
+                            .vertical{
+                                flex-direction: row;
+                                .organization{
+                                    max-height: fit-content;
+                                }
+                            }
+                            .overview{
+                                margin-left: 0px;
+                                padding: 12px !important;
+                                min-width: auto;
+                                max-height: fit-content;
+                            }
+                        }
+                        .detailed-step-container{
+                            flex-direction: column;
+                            padding-top: 40px !important;
+                            padding-bottom: 40px !important;
+                        }
+                    }
+                }
+                .navigator{
+                    visibility: hidden;
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width: 390px)  {
+    .main-container{
+        .brief-container{
+            flex-direction: column;
+            .text-container{
+                padding-left: 20px;
+                padding-right: 20px;
+                min-height: 413px;
+                max-height: 413px;
+            }
+            .img-container{
+                max-height: 400px;
+                img{
+                    object-fit: cover;
+                    max-width: 700px;
+                }  
+            }
+        }
+    }
+    .wrapper-container{
+        .project-info-container{
+            .design-process{
+                padding-top: 40px;
+                padding-left: 20px;
+                padding-right: 20px;
+                .steps-container{
+                    margin-top: 24px;
+                    width: 350px;
+                }
+            }
+            .main-container{
+                padding-left: 20px;
+                padding-right: 20px;
+                .scrollable-container{
+                    .scrollable-div{
+                        .bento-container{
+                            .vertical{
+                                flex-direction: column;
+                                gap: 8px;
+                                .role{
+                                    min-width: fit-content;
+                                    max-width: -webkit-fill-available;
+                                }
+                                .organization{
+                                    max-height: fit-content;
+                                    min-width: fit-content;
+                                    max-width: -webkit-fill-available;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

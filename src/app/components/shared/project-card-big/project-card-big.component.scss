@@ -57,3 +57,50 @@
         background: #E9ECEF28;
     }
 }
+
+@media only screen and (max-width: 768px)  {
+    .project-card-big{
+        max-width: 728px;
+        min-width: 71vh;
+        min-height: 526px;
+        max-height: 526px;
+        margin-bottom: 16px;
+        .card{
+            flex-direction: column;
+            .text-container{
+                padding-top: 44px;
+                padding-left: 29px;
+                min-height: 198px;
+                max-height: 198px;
+                .intro{
+                    display: none;
+                    visibility: hidden;
+                }
+            }
+            .img-container{
+                max-height: 284px;
+                justify-content: flex-end;
+                img{
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 390px)  {
+    .project-card-big{
+        max-width: 350px;
+        min-width: 90%;
+        .card{
+            .img-container{
+                margin-top: 32px;
+                max-height: 252px;
+                justify-content: center;
+                img{
+                    object-fit: contain;
+                }
+            }
+        }
+    }
+}
