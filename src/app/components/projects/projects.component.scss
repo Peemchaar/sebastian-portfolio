@@ -43,3 +43,35 @@
     flex-direction: column;
     align-items: center;
 }
+
+
+@media only screen and (max-width: 768px)  {
+    .projects-container{
+        margin-bottom: 106px;
+        .cards-container{
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    }
+}
+
+@media only screen and (max-width: 390px)  {
+    .projects-container{
+        .title-container{
+            padding-left: 20px;
+            padding-right: 20px;
+            width: 90%;
+            max-width: 350px;
+            .title{
+                max-width: 350px !important;
+                min-width: 350px !important;
+                font-size: 48px;
+                line-height: 56px;
+            }
+            .motto{
+                max-width: 350px !important;
+                min-width: 350px !important;
+            }
+        }
+    }
+}
