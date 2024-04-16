@@ -676,13 +676,56 @@
                             flex-direction: column;
                             padding-top: 40px !important;
                             padding-bottom: 40px !important;
+                            .content{
+                                min-width: 674px;
+                                max-width: 674px;
+                                overflow-x: scroll;
+                                .primary-image{
+                                    min-width: fit-content;
+                                }
+                                .secondary-image{
+                                    min-width: fit-content;
+                                }
+                            }
                         }
+                    }
+                    .next-container{
+                        margin-top: 76px;
+
                     }
                 }
                 .navigator{
                     visibility: hidden;
                     display: none;
                 }
+            }
+            .carbon-animated-container{
+                .primary-gif-container{
+                    display: none;
+                    visibility: hidden;
+                }
+                .second-container{
+                    .text{
+                        margin-left: 0;
+                        text-align: center;
+                    }
+                }
+            }
+            .scrollable-container{
+                .scrollable-div{
+                    .analysis-container{
+                        flex-direction: column;
+                        .content{
+                            min-width: auto;
+                            max-width: none;
+                            .secondary-text{
+                                visibility: hidden;
+                                display: none;
+                            }
+                        }
+                    }
+                }
+                
             }
         }
     }
@@ -739,6 +782,75 @@
                                 }
                             }
                         }
+                        .detailed-step-container{
+                            .content{
+                                min-width: 350px;
+                                max-width: 350px;
+                            }
+                        }
+                    }
+                    .next-container{
+                        margin-top: 76px;
+                        min-width: auto;
+                        max-width: -webkit-fill-available;
+                        .next-project{
+                            min-width: auto;
+                            max-width: fit-content;
+                            min-height: 526px;
+                            max-height: 526px;
+                            .next-card{
+                                flex-direction: column;
+                                min-height: 526px;
+                                max-height: 526px;
+                                .text-container{
+                                    padding-top: 44px;
+                                    padding-left: 30px;
+                                    min-height: 112px;
+                                    max-height: 112px;
+                                    .title{
+                                        font-size: 36px;
+                                        line-height: 40px;
+                                    }
+                                    .sub-title{
+                                        .location{
+                                            font-size: 16px;
+                                            line-height: 22px;
+                                        }
+                                        .motto{
+                                            font-size: 16px;
+                                            line-height: 22px;
+                                        }
+                                    }
+                                    .intro{
+                                        visibility: hidden;
+                                        display: none;
+                                    }
+                                }
+                                .img-container{
+                                    max-height: 334px;
+                                }
+                            }
+                        }
+                        
+                    }
+                }
+            }
+            .carbon-animated-container{
+                padding-left: 20px;
+                padding-right: 20px;
+                max-width: 350px;
+                .second-container{
+                    padding-left: 20px;
+                    padding-right: 20px;
+                    max-width: 350px;
+                    .text{
+                        font-size: 24px;
+                        line-height: 24px;
+                    }
+                    .secondary-gif-container{
+                        min-width: 310px;
+                        max-width: 310px;
+                        max-height: 233px;
                     }
                 }
             }
