@@ -24,7 +24,7 @@ COPY . .
 
 # Build the Angular app for production
 RUN npm ci  --legacy-peer-deps
-RUN ng build  --legacy-peer-deps --prod
+RUN ng build --prod
 
 
 #================================================
