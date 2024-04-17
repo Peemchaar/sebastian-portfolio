@@ -5,7 +5,7 @@
 # Stage 1 - the build process
 #================================================
 # Use the official Node.js image as the base image
-FROM node:lts-alpine as build-env
+FROM node:gallium-alpine3.18 as build-env
 
 LABEL maintainer="Hermes Rodríguez <hejeroaz@gmail.com>"
 LABEL maintainer="Sebastian Rodríguez <zosebas@gmail.com>"
@@ -17,10 +17,7 @@ WORKDIR /app
 COPY package.json .
 
 # Install project dependencies
-RUN node -v
-RUN npm install -g npm@10.5.2
-RUN npm cache clean --force
-RUN npm install
+RUN npm install --legacy-peer-deps
 
 # Copy the entire project to the container
 COPY . .
