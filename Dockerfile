@@ -23,8 +23,8 @@ RUN npm install --legacy-peer-deps
 COPY . .
 
 # Build the Angular app for production
-RUN npm ci
-RUN ng build --prod
+RUN npm ci  --legacy-peer-deps
+RUN ng build  --legacy-peer-deps --prod
 
 
 #================================================
