@@ -5,10 +5,10 @@ import { HeaderService } from 'src/app/services/header.service';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css']
+  styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-
+  displayMenu: boolean = false;
   navData: InavItem[] = [
     {
       text: 'Home',
@@ -45,8 +45,14 @@ export class HeaderComponent implements OnInit {
     });
   }
 
+  toggleMenu(){
+    this.displayMenu = !this.displayMenu;
+  }
+
   public navigate(target: string){
-    
+    if(this.displayMenu){
+      this.toggleMenu()
+    }
     switch (target.toLocaleLowerCase()) {
       case 'home':
         this.headerService.updateCurrentPage(target);

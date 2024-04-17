@@ -411,7 +411,7 @@ export class ProjectsList extends Array<IProject> {
             mainImage: '../../assets/img/swappinc/swappinc_large.svg',
             mainPNG: '../../assets/img/swappinc/graphic.png',
             country: 'Spain',
-            title: 'Swappinc: Where the bartering experience succeeds',
+            title: 'Swappinc: The bartering experience',
             location: 'Swappinc c.a, 2023 - ',
             motto: 'Creating innovative, fun and adventurous experiencies.',
             intro: 'Swappinc is the place where objects find the right value determined by the user through barter. In a fun, dynamic and organic way, Swappinc seeks to provide the user with a versatile and modern bartering platform.',

@@ -1,10 +1,13 @@
-<div class="header-container pv2 " [ngClass]="currentPage == 'contact' ? 'contact-bg': 'bg-primary-gradient'">
+<div class="header-container pv2 " [ngClass]="[
+    currentPage == 'contact' ? 'contact-bg': 'bg-primary-gradient',
+    displayMenu? 'bg-dark4': ''
+    ]">
     <img src="../../../../assets/img/header_logo.svg" alt="logo">
     <div class="nav-container">
         <div class="nav-bar">
             <ng-container *ngFor="let item of navData">
                 <div class="nav-item pv2 ph3 bg-primary-hover" [ngClass]="item.active ? 'active': ''"
-                    (click)=navigate(item.text)
+                    (click)="navigate(item.text)"
                 >
                     <span class="fira-medium color-medium2">{{item.text}}</span>
                 </div>
@@ -14,6 +17,28 @@
             <span class="fira-medium color-dark3"
                 (click)="navigate('contact')">
                 Contact
+            </span>
+        </div>
+    </div>
+    <div class="mobile-nav">
+        <img class="menu-icon" src="../../../../assets/icons/menu.svg" alt="menu" (click)='toggleMenu()' *ngIf="!displayMenu">
+        <img class="clear-icon" src="../../../../assets/icons/clear.svg" alt="menu" (click)='toggleMenu()' *ngIf="displayMenu">
+    </div>
+    
+</div>
+<div class="mobile-menu animated bg-dark4" [ngClass]="(displayMenu)? 'fadeInRight' : 'fadeOutRight' ">
+    <ng-container *ngFor="let item of navData">
+        <div class="mobile-nav-item pv2 ph3 bg-dark4 divider" [ngClass]="item.active ? 'active': ''"
+            (click)="navigate(item.text)"
+        >
+            <span class="fira-medium color-medium2">{{item.text}}</span>
+        </div>
+    </ng-container>
+    <div class="btn-container divider">
+        <div class="btn-primary-dark">
+            <span class="fira-medium color-medium2"
+                (click)="navigate('contact')">
+                Contact me
             </span>
         </div>
     </div>

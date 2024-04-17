@@ -155,7 +155,7 @@ body{
     background: #343A40;
 }
 .bg-dark4{
-    background: #212529;
+    background: #212529 !important;
 }
 .bg-dark5{
     background: #030303;
