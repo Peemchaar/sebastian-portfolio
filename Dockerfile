@@ -17,7 +17,7 @@ WORKDIR /app
 COPY package.json .
 
 # Install project dependencies
-RUN npm install -g npm@10.5.2 && npm cache clean --force && npm install
+RUN node -v && npm install -g npm@10.5.2 && npm cache clean --force && npm install
 
 # Copy the entire project to the container
 COPY . .
