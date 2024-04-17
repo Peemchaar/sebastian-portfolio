@@ -38,7 +38,7 @@ build-job: # This job runs in the build stage, which runs first.
     - export VERSION=$(echo "$(git rev-parse HEAD)")
     - date > build-datetime.log
     - echo "Creating docker image ..."
-    - docker buildx build --platform linux/amd64 --build-arg VERSION="${VERSION}" -t portfolio:latest .
+    - docker buildx build --no-cache --platform linux/amd64 --build-arg VERSION="${VERSION}" -t portfolio:latest .
     - mkdir -p scripts
     - touch scripts/my_image_name.log
     - echo "MY_IMAGE_NAME=${MY_IMAGE_NAME}" > scripts/my_image_name.log

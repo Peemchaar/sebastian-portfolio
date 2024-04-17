@@ -13,11 +13,11 @@ LABEL maintainer="Sebastian Rodríguez <zosebas@gmail.com>"
 # Set the working directory in the container
 WORKDIR /app
 
-# Copy package.json and package-lock.json to the container
-COPY package*.json ./
+# Copy package.json to the container
+COPY package.json .
 
 # Install project dependencies
-RUN npm install
+RUN npm install -g npm@10.5.2 && npm install
 
 # Copy the entire project to the container
 COPY . .
