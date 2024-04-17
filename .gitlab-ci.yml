@@ -1,0 +1,84 @@
+# This file is a template, and might need editing before it works on your project.
+# This is a sample GitLab CI/CD configuration file that should run without any modifications.
+# It demonstrates a basic 3 stage CI/CD pipeline. Instead of real tests or scripts,
+# it uses echo commands to simulate the pipeline execution.
+#
+# A pipeline is composed of independent jobs that run scripts, grouped into stages.
+# Stages run in sequential order, but jobs within stages run in parallel.
+#
+# For more information, see: https://docs.gitlab.com/ee/ci/yaml/index.html#stages
+#
+# You can copy and paste this template into a new `.gitlab-ci.yml` file.
+# You should not add this template to an existing `.gitlab-ci.yml` file by using the `include:` keyword.
+#
+# To contribute improvements to CI/CD templates, please follow the Development guide at:
+# https://docs.gitlab.com/ee/development/cicd/templates.html
+# This specific template is located at:
+# https://gitlab.com/gitlab-org/gitlab/-/blob/master/lib/gitlab/ci/templates/Getting-Started.gitlab-ci.yml
+
+stages: # List of stages for jobs, and their order of execution
+  - build
+  - test
+  - publish
+  - deploy
+
+build-job: # This job runs in the build stage, which runs first.
+  stage: build
+  rules:
+    - if: ($CI_COMMIT_BRANCH == "develop" && $CI_COMMIT_REF_NAME == "develop")
+      variables:
+        MY_IMAGE_NAME: "hcr.hermesrodriguez.io/sealroma/Portfolio-develop:latest"
+    - if: ($CI_COMMIT_BRANCH == "uat" && $CI_COMMIT_REF_NAME == "uat")
+      variables:
+        MY_IMAGE_NAME: "hcr.hermesrodriguez.io/sealroma/Portfolio-uat:latest"
+    - if: ($CI_COMMIT_BRANCH == "main" && $CI_COMMIT_REF_NAME == "main")
+      variables:
+        MY_IMAGE_NAME: "hcr.hermesrodriguez.io/sealroma/Portfolio:latest"
+  script:
+    - export VERSION=$(echo "$(git rev-parse HEAD)")
+    - date > build-datetime.log
+    - echo "Creating docker image ..."
+    - docker buildx build --platform linux/amd64 --build-arg VERSION="${VERSION}" -t Portfolio:latest .
+    - mkdir -p scripts
+    - touch scripts/my_image_name.log
+    - echo "MY_IMAGE_NAME=${MY_IMAGE_NAME}" > scripts/my_image_name.log
+    - echo "Docker image successfully created ..."
+  artifacts:
+    paths:
+      - scripts/my_image_name.log
+
+unit-test-job: # This job runs in the test stage.
+  stage: test    # It only starts when the job in the build stage completes successfully.
+  script:
+    - echo "Running unit tests ... This will take more than 30 seconds ..."
+    - sleep 30
+    - echo "Code coverage is 90% ..."
+
+lint-test-job: # This job also runs in the test stage.
+  stage: test    # It can run at the same time as unit-test-job (in parallel).
+  script:
+    - echo "Linting code ... This will take about 10 seconds ..."
+    - sleep 10
+    - echo "No lint issues found ..."
+
+publish-job: # This job runs in the deploy stage.
+  stage: publish  # It only runs when *both* jobs in the test stage complete successfully.
+  dependencies:
+    - "build-job"
+  script:
+    - MY_IMAGE_NAME=$(cat scripts/my_image_name.log|grep MY_IMAGE_NAME|cut -d = -f2)
+    - echo "Tagging Docker image ..."
+    - docker tag Portfolio:latest $MY_IMAGE_NAME
+    - echo "Uploading Docker image ..."
+    - docker push $MY_IMAGE_NAME
+    - echo "Remove created Docker image ..."
+    - docker rmi $MY_IMAGE_NAME
+    - echo "Docker image successfully published ..."
+  # only:
+  #   changes:
+  #     - .gitlab-ci.yml
+
+# trigger-job:
+#   stage: deploy
+#   trigger:
+#     project: sealroma/Portfolio.Infrastructure
