@@ -27,18 +27,18 @@ build-job: # This job runs in the build stage, which runs first.
   rules:
     - if: ($CI_COMMIT_BRANCH == "develop" && $CI_COMMIT_REF_NAME == "develop")
       variables:
-        MY_IMAGE_NAME: "hcr.hermesrodriguez.io/sealroma/Portfolio-develop:latest"
+        MY_IMAGE_NAME: "hcr.hermesrodriguez.io/sealroma/portfolio-develop:latest"
     - if: ($CI_COMMIT_BRANCH == "uat" && $CI_COMMIT_REF_NAME == "uat")
       variables:
-        MY_IMAGE_NAME: "hcr.hermesrodriguez.io/sealroma/Portfolio-uat:latest"
+        MY_IMAGE_NAME: "hcr.hermesrodriguez.io/sealroma/portfolio-uat:latest"
     - if: ($CI_COMMIT_BRANCH == "main" && $CI_COMMIT_REF_NAME == "main")
       variables:
-        MY_IMAGE_NAME: "hcr.hermesrodriguez.io/sealroma/Portfolio:latest"
+        MY_IMAGE_NAME: "hcr.hermesrodriguez.io/sealroma/portfolio:latest"
   script:
     - export VERSION=$(echo "$(git rev-parse HEAD)")
     - date > build-datetime.log
     - echo "Creating docker image ..."
-    - docker buildx build --platform linux/amd64 --build-arg VERSION="${VERSION}" -t Portfolio:latest .
+    - docker buildx build --platform linux/amd64 --build-arg VERSION="${VERSION}" -t portfolio:latest .
     - mkdir -p scripts
     - touch scripts/my_image_name.log
     - echo "MY_IMAGE_NAME=${MY_IMAGE_NAME}" > scripts/my_image_name.log
@@ -68,7 +68,7 @@ publish-job: # This job runs in the deploy stage.
   script:
     - MY_IMAGE_NAME=$(cat scripts/my_image_name.log|grep MY_IMAGE_NAME|cut -d = -f2)
     - echo "Tagging Docker image ..."
-    - docker tag Portfolio:latest $MY_IMAGE_NAME
+    - docker tag portfolio:latest $MY_IMAGE_NAME
     - echo "Uploading Docker image ..."
     - docker push $MY_IMAGE_NAME
     - echo "Remove created Docker image ..."
