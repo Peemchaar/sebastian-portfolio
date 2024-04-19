@@ -154,7 +154,7 @@ COPY 20-envsubst-on-templates.sh /docker-entrypoint.d
 COPY 30-tune-worker-processes.sh /docker-entrypoint.d
 COPY 99-build-datetime.sh /docker-entrypoint.d
 
-COPY --from=build-env /app/dist /usr/share/nginx/html
+COPY --from=build-env /app/dist/sebastian_portfolio /usr/share/nginx/html
 COPY --from=build-env /app/nginx.conf /etc/nginx/conf.d/default.conf
 RUN chown -R 10000:10000 /usr/share/nginx/html
 RUN chmod +x /docker-entrypoint.sh

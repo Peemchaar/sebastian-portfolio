@@ -78,7 +78,7 @@ publish-job: # This job runs in the deploy stage.
   #   changes:
   #     - .gitlab-ci.yml
 
-# trigger-job:
-#   stage: deploy
-#   trigger:
-#     project: sealroma/Portfolio.Infrastructure
+trigger-job:
+  stage: deploy
+  trigger:
+    project: sealroma/Portfolio.Infrastructure
