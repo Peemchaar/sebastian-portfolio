@@ -94,6 +94,10 @@
         max-width: 350px;
         min-width: -webkit-fill-available;
         .card{
+            .text-container{
+                padding-left: 6px;
+                padding-top: 12px;
+            }
             .img-container{
                 margin-top: 32px;
                 max-height: 252px;

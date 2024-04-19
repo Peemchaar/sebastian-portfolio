@@ -192,6 +192,7 @@
             flex-direction: column;
             justify-content: flex-start;
             overflow: hidden;
+            width: -webkit-fill-available;
             .scrollable-div{
                 width: 100%;
                 overflow: auto;
@@ -202,7 +203,7 @@
             }
             .bento-container{
                 display: flex;
-                justify-content: center;
+                justify-content: flex-start;
                 padding-bottom: 48px;
                 border-bottom: 1px solid #ADB5BD;
                 .vertical{
@@ -287,7 +288,7 @@
             
             .detailed-step-container{
                 display: flex;
-                justify-content: center;
+                justify-content: flex-start;
                 gap: 18px;
                 padding-bottom: 40px;
                 padding-top: 40px;
@@ -645,7 +646,7 @@
             .design-process{
                 .steps-container{
                     overflow-x: scroll;
-                    width: 674px;
+                    width: -webkit-fill-available;
                 }
             }
             .main-container{
@@ -767,6 +768,8 @@
             }
             .img-container{
                 max-height: 400px;
+                width: -webkit-fill-available;
+                overflow: hidden;
                 img{
                     object-fit: cover;
                     max-width: 700px;
@@ -782,7 +785,7 @@
                 padding-right: 20px;
                 .steps-container{
                     margin-top: 24px;
-                    width: 350px;
+                    width: -webkit-fill-available;
                 }
             }
             .main-container{
