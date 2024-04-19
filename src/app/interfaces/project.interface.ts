@@ -549,7 +549,7 @@ export class ProjectsList extends Array<IProject> {
             name: 'Karko Corp',
             cardImage: '../../assets/img/karko/karko_card.svg',
             mainImage: '../../assets/img/karko/karko_large.png',
-            mainPNG: '../../assets/img/karko/graphic.png',
+            mainPNG: '../../assets/img/karko/karko_large.png',
             country: 'Venezuela',
             title: 'Karko Corp: The digital art supply shopping true experience',
             location: 'Study Case, 2019 - ',

@@ -6,6 +6,7 @@
     display: flex;
     
     justify-content: center;
+    gap: 24px;
     .text-container{
         padding-top: 44px;
         padding-left: 55px;
@@ -58,11 +59,13 @@
     .img-container{
         max-height: 650px;
         display: flex;
-        width: 50%;
         max-width: 1400px;
         justify-content: flex-start;
+        overflow-y: hidden;
+        overflow-x: clip;
         img{
-            object-fit: cover;
+            height: fit-content;
+            object-fit: contain;
         }
     }
 }
@@ -644,6 +647,21 @@
 
 
 @media only screen and (max-width: 768px)  {
+    .brief-container{
+        flex-direction: column;
+        .text-container{
+            min-height: 331px;
+            max-height: 331px;
+        }
+        .img-container{
+            width: -webkit-fill-available;
+            overflow: hidden;
+            img{
+                height: fit-content;
+                object-fit: contain;
+            }
+        }
+    }
     .wrapper-container{
         .project-info-container{
             .design-process{
