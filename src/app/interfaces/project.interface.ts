@@ -548,7 +548,7 @@ export class ProjectsList extends Array<IProject> {
             route: '/karko',
             name: 'Karko Corp',
             cardImage: '../../assets/img/karko/karko_card.svg',
-            mainImage: '../../assets/img/karko/karko_large.svg',
+            mainImage: '../../assets/img/karko/karko_large.png',
             mainPNG: '../../assets/img/karko/graphic.png',
             country: 'Venezuela',
             title: 'Karko Corp: The digital art supply shopping true experience',
@@ -680,7 +680,7 @@ export class ProjectsList extends Array<IProject> {
                 '../../assets/img/carbon_journey/carbon_2_gif.gif',
             ],
             aditional_content: [
-                '../../assets/img/karko/aditional_1.svg',
+                '../../assets/img/karko/aditional_1.png',
             ],
             analysis: {
                 name: 'Analysis',

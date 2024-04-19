@@ -52,6 +52,9 @@
             max-height: 574px;
             display: flex;
             overflow: hidden;
+            img{
+                object-fit: contain;
+            }
         }
     }
     .card:hover{
@@ -80,7 +83,8 @@
             }
             .img-container{
                 max-height: 284px;
-                justify-content: flex-end;
+                flex-direction: column;
+                justify-content: flex-start;
                 img{
                     object-fit: cover;
                 }
@@ -101,9 +105,8 @@
             .img-container{
                 margin-top: 32px;
                 max-height: 252px;
-                justify-content: center;
                 img{
-                    object-fit: contain;
+                    object-fit: cover;
                 }
             }
         }

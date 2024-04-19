@@ -632,6 +632,9 @@
             max-width: 360px;
             display: flex;
             justify-content: center;
+            img{
+                object-fit: contain;
+            }
         }
     }
     .next-card:hover{
@@ -770,6 +773,7 @@
                 max-height: 400px;
                 width: -webkit-fill-available;
                 overflow: hidden;
+                justify-content: center;
                 img{
                     object-fit: cover;
                     max-width: 700px;
