@@ -7,12 +7,11 @@
     min-height: 683px;
     background: linear-gradient(to top, #212529 0%, #495057 100%);;
     .image-container{
-        background-image: url('../../../assets/img/contact_img_1.svg');
-        background-size: cover;
         width: 682px;
         height: 488px;
         max-width: 682px;
         max-height: 488px;
+        display: contents;
     }
     .create-container{
         display: flex;
@@ -285,9 +284,7 @@
     .collaborate-container{
         flex-direction: column;
         padding-left: 20px;
-        .image-container{
-            margin-top: 54px;
-        }
+        padding-top: 54px;
         .create-container{
             .title{
                 text-align: left !important;
@@ -348,10 +345,10 @@
     .collaborate-container{
         gap: 16px !important;
         .image-container{
-            width: 405px;
-            height: 329px;
-            max-width: 405px;
-            max-height: 329px;
+            width: 100%;
+            height: auto;
+            display: flex;
+            overflow: hidden;
         }
     }
     .contact-container{

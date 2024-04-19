@@ -34,12 +34,11 @@
 }
 
 .overview-container{
-    background-image: url('../../../assets/img/portrait_home_x2.png');
-    background-size: cover;
     width: 614px;
     height: 619px;
     max-width: 614px;
     max-height: 619px;
+    display: contents;
 }
 
 .displacer-container{
@@ -284,9 +283,8 @@
 @media only screen and (max-width: 390px)  {
     .hero-container{
         .overview-container{
-            width: 308px;
-            height: 310px;
-            background-size: contain;
+            width: 100%;
+            height: auto;
         }
     }
 }

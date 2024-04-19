@@ -505,7 +505,7 @@ export class ProjectsList extends Array<IProject> {
                     name: 'Results',
                     title: 'Product manual',
                     primary_image:  null,
-                    secondary_image: '../../assets/img/swappinc/step4_secondary.svg',
+                    secondary_image: '../../assets/img/swappinc/step4_secondary.png',
                     primary_text: 'A product manual is a compendium of graphical rules that must be applied if we want to convey through visuals a brand’s concepts, these can be played in a limited way, but always must serve as floor for creativity and innovation through unique solutions. They are not stretched parcels that cannot be  surpassed, they are the base of creativity and growth. ',
                     secondary_text: 'Swappinc Product’s Manual is just the beginning of the brand’s visual assets construction, it was built as a fertile base for creativity and uniqueness, as it brand’s concept stablish: it is a creativity core that must be always in movement providing a fulfilling experience through change. The delicate relations through concepts were always our main core from where all other derivatives came from, this will guarantee a profound connection networking over stablished concepts discovered on research and insight.',
                     list: {
@@ -548,7 +548,7 @@ export class ProjectsList extends Array<IProject> {
             route: '/karko',
             name: 'Karko Corp',
             cardImage: '../../assets/img/karko/karko_card.svg',
-            mainImage: '../../assets/img/karko/karko_large.svg',
+            mainImage: '../../assets/img/karko/karko_large.png',
             mainPNG: '../../assets/img/karko/graphic.png',
             country: 'Venezuela',
             title: 'Karko Corp: The digital art supply shopping true experience',
@@ -680,7 +680,7 @@ export class ProjectsList extends Array<IProject> {
                 '../../assets/img/carbon_journey/carbon_2_gif.gif',
             ],
             aditional_content: [
-                '../../assets/img/karko/aditional_1.svg',
+                '../../assets/img/karko/aditional_1.png',
             ],
             analysis: {
                 name: 'Analysis',

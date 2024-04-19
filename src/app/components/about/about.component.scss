@@ -35,12 +35,11 @@
 }
 
 .picture-container{
-    background-image: url('../../../assets/img/about_img.svg');
-    background-size: cover;
     width: 663px;
     height: 751px;
     max-width: 663px;
     max-height: 751px;
+    display: contents;
 }
 
 .skills-container{
@@ -189,10 +188,8 @@
 @media only screen and (max-width: 390px)  {
     .about-container{
         .picture-container{
-            width: 330px;
-            height: 375px;
-            max-width: 330px;
-            max-height: 375px;
+            width: 100%;
+            height: auto;
         }
         .presentation-container{
             max-width: 346px;
