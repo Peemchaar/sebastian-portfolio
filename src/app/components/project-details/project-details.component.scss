@@ -213,6 +213,7 @@
                     display: flex;
                     flex-direction: column;
                     justify-content: space-between;
+                    gap: 8px;
                     .role{
                         display: flex;
                         flex-direction: column;
@@ -220,7 +221,6 @@
                         border-radius: 12px;
                         padding: 12px;
                         max-width: 286px;
-                        max-height: 153px;
                         min-width: 286px;
                         min-height: 153px;
                         background-color: #CED4DA1F;
@@ -230,12 +230,12 @@
                         }
                         .name{
                             margin-top: 10px;
-                            font-size: 16px;
+                            font-size: 18px;
                             line-height: 40px;
                         }
                         .tasks{
-                            font-size: 16px;
-                            line-height: 16px;
+                            font-size: 18px;
+                            line-height: 18px;
                         }
                     }
                     .organization{
@@ -245,7 +245,6 @@
                         border-radius: 12px;
                         padding: 12px;
                         max-width: 286px;
-                        max-height: 112px;
                         min-width: 286px;
                         min-height: 112px;
                         background-color: #CED4DA1F;
@@ -267,9 +266,6 @@
                     border-radius: 12px;
                     margin-left: 36px;
                     padding: 12px;
-                    max-width: 803px;
-                    max-height: 299px;
-                    min-width: 803px;
                     min-height: 299px;
                     background-color: #CED4DA1F;
                     .title{
@@ -279,12 +275,12 @@
                     .primary{
                         margin-top: 16px;
                         margin-bottom: 16px;
-                        font-size: 14px;
-                        line-height: 16px;
+                        font-size: 18px;
+                        line-height: 20px;
                     }
                     .secondary{
-                        font-size: 14px;
-                        line-height: 16px;
+                        font-size: 18px;
+                        line-height: 20px;
                     }
                 }
             }
@@ -313,8 +309,6 @@
                     display: flex;
                     flex-direction: column;
                     justify-content: flex-start;
-                    min-width: 827px;
-                    max-width: 827px;
                     .primary-image{
                         margin-bottom: 24px;
                     }
@@ -322,13 +316,13 @@
                         margin-bottom: 24px;
                     }
                     .primary-text{
-                        font-size: 16px;
-                        line-height: 19px;
+                        font-size: 18px;
+                        line-height: 20px;
                         margin-bottom: 16px;
                     }
                     .secondary-text{
-                        font-size: 12px;
-                        line-height: 14px;
+                        font-size: 14px;
+                        line-height: 16px;
                         margin-bottom: 24px;
                     }
                     .list{
@@ -341,8 +335,8 @@
                             line-height: 19px;
                         }
                         .list-item{
-                            font-size: 12px;
-                            line-height: 14px;
+                            font-size: 14px;
+                            line-height: 16px;
                         }
                     }
                 }
