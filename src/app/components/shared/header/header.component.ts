@@ -47,6 +47,7 @@ export class HeaderComponent implements OnInit {
 
   toggleMenu(){
     this.displayMenu = !this.displayMenu;
+    this.displayMenu == true? document.body.style.overflowY = 'hidden' : document.body.style.overflowY = 'visible';
   }
 
   public navigate(target: string){
