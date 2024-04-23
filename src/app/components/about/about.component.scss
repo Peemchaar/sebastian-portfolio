@@ -185,20 +185,20 @@
     }
 }
 
-@media only screen and (max-width: 390px)  {
+@media only screen and (max-width: 540px)  {
     .about-container{
         .picture-container{
-            width: 100%;
+            width: -webkit-fill-available;
             height: auto;
         }
         .presentation-container{
-            max-width: 346px;
+            max-width: -webkit-fill-available;
         }
     }
     .skills-container{
         .wrapper{
             .skill-details{
-                max-width: 390px;
+                max-width: -webkit-fill-available;
                 .title{
                     max-width: 350px !important;
                 }

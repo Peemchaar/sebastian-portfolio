@@ -61,10 +61,12 @@
         }
     }
 }
-@media only screen and (max-width: 390px)  {
+@media only screen and (max-width: 480px)  {
     .main-container{
         max-height: 320px !important;
         min-height: 320px !important;
+        padding-left: 20px;
+        padding-right: 20px;
         .primary-text{
             max-width: 310px;
             align-self: center;
