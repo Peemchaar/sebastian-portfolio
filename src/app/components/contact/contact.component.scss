@@ -307,8 +307,8 @@
             min-width: 100% !important;
             max-width: 100% !important;
             .title{
-                min-width: 728px !important;
-                max-width: 728px !important;
+                min-width: -webkit-fill-available !important;
+                max-width: -webkit-fill-available !important;
                 padding-left: 20px !important;
                 padding-right: 20px !important;
             }
@@ -341,7 +341,7 @@
     }
 }
 
-@media only screen and (max-width: 390px)  {
+@media only screen and (max-width: 540px)  {
     .collaborate-container{
         gap: 16px !important;
         .image-container{
@@ -354,40 +354,46 @@
     .contact-container{
         .form-container{
             .title{
-                min-width: 350px !important;
-                max-width: 350px !important;
+                min-width: -webkit-fill-available !important;
+                max-width: -webkit-fill-available !important;
                 padding-left: 20px !important;
                 padding-right: 20px !important;
             }
         }
         .contact-info{
+            min-width: -webkit-fill-available !important;
+            max-width: -webkit-fill-available !important;
             .model-container{
                 width: 350px;
                 height: 350px;
             }
             .info-container{
-                padding-left: 0px !important;
+                padding-left: 20px !important;
+                padding-right: 20px !important;
                 flex-direction: column;
-                width: 350px;
+                width: -webkit-fill-available !important;
                 height: auto !important;
                 .left-side{
-                    max-width: 350px;
-                    min-width: 350px;
+                    max-width: -webkit-fill-available !important;
+                    min-width: -webkit-fill-available !important;
                     .bottom-side{
+                        gap: 12px;
                         .ubiquity{
                             border-left: 16px solid #343A40;
                             border-right: 16px solid #343A40;
+                            width: -webkit-fill-available;
                         }
                         .time{
                             border-left: 12px solid #343A40;
                             border-right: 12px solid #343A40;
+                            width: -webkit-fill-available;
                         }
                     }
                     
                 }
                 .social-media{
-                    max-width: 318px;
-                    min-width: 318px;
+                    max-width: -webkit-fill-available !important;
+                    min-width: -webkit-fill-available !important;
                 }
             }
         }

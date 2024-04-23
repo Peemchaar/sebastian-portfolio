@@ -119,14 +119,18 @@
                                 </span>
                             </div>
                             <div class="content">
-                                <img src="{{detailedStep.primary_image}}" alt="primary_image" class="primary-image" *ngIf="detailedStep.primary_image != null">
+                                <div class="primary-image-container">
+                                    <img src="{{detailedStep.primary_image}}" alt="primary_image" class="primary-image" *ngIf="detailedStep.primary_image != null">
+                                </div>
                                 <span class="primary-text libre-semiBold color-white2">
                                     {{detailedStep.primary_text}}
                                 </span>
                                 <span class="secondary-text nunito-regular color-white2">
                                     {{detailedStep.secondary_text}}
                                 </span>
-                                <img src="{{detailedStep.secondary_image}}" alt="secondary_image" class="secondary-image" *ngIf="detailedStep.secondary_image != null">
+                                <div class="secondary-image-container">
+                                    <img src="{{detailedStep.secondary_image}}" alt="secondary_image" class="secondary-image" *ngIf="detailedStep.secondary_image != null">
+                                </div>
                                 <div class="list">
                                     <span class="title libre-semiBold color-white2">
                                         {{detailedStep.list.title}}
