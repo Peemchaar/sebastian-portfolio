@@ -47,8 +47,7 @@
     display: flex;
     justify-content: center;
     .form-container{
-        min-width: 55%;
-        max-width: 55%;
+        max-width: 768px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -129,8 +128,7 @@
         
     }
     .contact-info{
-        min-width: 45%;
-        max-width: 45%;
+        max-width: 627px;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -397,5 +395,11 @@
                 }
             }
         }
+    }
+}
+
+@media only screen and (max-width: 380px)  {
+    .bottom-side{
+        flex-direction: column;
     }
 }
