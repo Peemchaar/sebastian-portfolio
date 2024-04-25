@@ -37,4 +37,8 @@ export class AboutComponent implements OnInit {
           },
         500);
   }
+
+  downloadCV(){
+    window.open('../../assets/downloads/CV2024.pdf', '_blank');
+  }
 }

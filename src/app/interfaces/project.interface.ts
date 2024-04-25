@@ -547,7 +547,7 @@ export class ProjectsList extends Array<IProject> {
         this[3] = {
             route: '/karko',
             name: 'Karko Corp',
-            cardImage: '../../assets/img/karko/karko_card.svg',
+            cardImage: '../../assets/img/karko/karko_card.png',
             mainImage: '../../assets/img/karko/karko_large.png',
             mainPNG: '../../assets/img/karko/karko_large.png',
             country: 'Venezuela',
