@@ -40,6 +40,9 @@
     max-width: 663px;
     max-height: 751px;
     display: contents;
+    img{
+        max-width: 663px;
+    }
 }
 
 .skills-container{
@@ -50,7 +53,8 @@
         display: flex;
         min-height: 358px;
         max-height: 358px;
-        justify-content: space-around;
+        justify-content: center;
+        gap: 328px;
         .skill-details{
             display: flex;
             flex-direction: column;
@@ -133,6 +137,7 @@
             justify-content: flex-start !important;
             min-height: 716px !important;
             max-height: 716px !important;
+            gap: unset;
             .skill-details{
                 min-height: 358px;
                 max-height: 358px;
